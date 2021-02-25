@@ -98,6 +98,86 @@ const routes = [
         ]
       },
       {
+        path: 'product-management',
+        name: 'product_management',
+        component: View,
+        redirect: { name: 'product_categories.index' },
+        children: [
+          {
+            path: 'product-categories',
+            name: 'product_categories.index',
+            component: () => import('@cruds/ProductCategories/Index.vue'),
+            meta: { title: 'cruds.productCategory.title' }
+          },
+          {
+            path: 'product-categories/create',
+            name: 'product_categories.create',
+            component: () => import('@cruds/ProductCategories/Create.vue'),
+            meta: { title: 'cruds.productCategory.title' }
+          },
+          {
+            path: 'product-categories/:id',
+            name: 'product_categories.show',
+            component: () => import('@cruds/ProductCategories/Show.vue'),
+            meta: { title: 'cruds.productCategory.title' }
+          },
+          {
+            path: 'product-categories/:id/edit',
+            name: 'product_categories.edit',
+            component: () => import('@cruds/ProductCategories/Edit.vue'),
+            meta: { title: 'cruds.productCategory.title' }
+          },
+          {
+            path: 'product-tags',
+            name: 'product_tags.index',
+            component: () => import('@cruds/ProductTags/Index.vue'),
+            meta: { title: 'cruds.productTag.title' }
+          },
+          {
+            path: 'product-tags/create',
+            name: 'product_tags.create',
+            component: () => import('@cruds/ProductTags/Create.vue'),
+            meta: { title: 'cruds.productTag.title' }
+          },
+          {
+            path: 'product-tags/:id',
+            name: 'product_tags.show',
+            component: () => import('@cruds/ProductTags/Show.vue'),
+            meta: { title: 'cruds.productTag.title' }
+          },
+          {
+            path: 'product-tags/:id/edit',
+            name: 'product_tags.edit',
+            component: () => import('@cruds/ProductTags/Edit.vue'),
+            meta: { title: 'cruds.productTag.title' }
+          },
+          {
+            path: 'products',
+            name: 'products.index',
+            component: () => import('@cruds/Products/Index.vue'),
+            meta: { title: 'cruds.product.title' }
+          },
+          {
+            path: 'products/create',
+            name: 'products.create',
+            component: () => import('@cruds/Products/Create.vue'),
+            meta: { title: 'cruds.product.title' }
+          },
+          {
+            path: 'products/:id',
+            name: 'products.show',
+            component: () => import('@cruds/Products/Show.vue'),
+            meta: { title: 'cruds.product.title' }
+          },
+          {
+            path: 'products/:id/edit',
+            name: 'products.edit',
+            component: () => import('@cruds/Products/Edit.vue'),
+            meta: { title: 'cruds.product.title' }
+          }
+        ]
+      },
+      {
         path: 'contact-management',
         name: 'contact_management',
         component: View,
@@ -150,6 +230,86 @@ const routes = [
             name: 'contact_contacts.edit',
             component: () => import('@cruds/ContactContacts/Edit.vue'),
             meta: { title: 'cruds.contactContact.title' }
+          }
+        ]
+      },
+      {
+        path: 'content-management',
+        name: 'content_management',
+        component: View,
+        redirect: { name: 'content_categories.index' },
+        children: [
+          {
+            path: 'content-categories',
+            name: 'content_categories.index',
+            component: () => import('@cruds/ContentCategories/Index.vue'),
+            meta: { title: 'cruds.contentCategory.title' }
+          },
+          {
+            path: 'content-categories/create',
+            name: 'content_categories.create',
+            component: () => import('@cruds/ContentCategories/Create.vue'),
+            meta: { title: 'cruds.contentCategory.title' }
+          },
+          {
+            path: 'content-categories/:id',
+            name: 'content_categories.show',
+            component: () => import('@cruds/ContentCategories/Show.vue'),
+            meta: { title: 'cruds.contentCategory.title' }
+          },
+          {
+            path: 'content-categories/:id/edit',
+            name: 'content_categories.edit',
+            component: () => import('@cruds/ContentCategories/Edit.vue'),
+            meta: { title: 'cruds.contentCategory.title' }
+          },
+          {
+            path: 'content-tags',
+            name: 'content_tags.index',
+            component: () => import('@cruds/ContentTags/Index.vue'),
+            meta: { title: 'cruds.contentTag.title' }
+          },
+          {
+            path: 'content-tags/create',
+            name: 'content_tags.create',
+            component: () => import('@cruds/ContentTags/Create.vue'),
+            meta: { title: 'cruds.contentTag.title' }
+          },
+          {
+            path: 'content-tags/:id',
+            name: 'content_tags.show',
+            component: () => import('@cruds/ContentTags/Show.vue'),
+            meta: { title: 'cruds.contentTag.title' }
+          },
+          {
+            path: 'content-tags/:id/edit',
+            name: 'content_tags.edit',
+            component: () => import('@cruds/ContentTags/Edit.vue'),
+            meta: { title: 'cruds.contentTag.title' }
+          },
+          {
+            path: 'content-pages',
+            name: 'content_pages.index',
+            component: () => import('@cruds/ContentPages/Index.vue'),
+            meta: { title: 'cruds.contentPage.title' }
+          },
+          {
+            path: 'content-pages/create',
+            name: 'content_pages.create',
+            component: () => import('@cruds/ContentPages/Create.vue'),
+            meta: { title: 'cruds.contentPage.title' }
+          },
+          {
+            path: 'content-pages/:id',
+            name: 'content_pages.show',
+            component: () => import('@cruds/ContentPages/Show.vue'),
+            meta: { title: 'cruds.contentPage.title' }
+          },
+          {
+            path: 'content-pages/:id/edit',
+            name: 'content_pages.edit',
+            component: () => import('@cruds/ContentPages/Edit.vue'),
+            meta: { title: 'cruds.contentPage.title' }
           }
         ]
       },
@@ -310,166 +470,6 @@ const routes = [
             name: 'faq_questions.edit',
             component: () => import('@cruds/FaqQuestions/Edit.vue'),
             meta: { title: 'cruds.faqQuestion.title' }
-          }
-        ]
-      },
-      {
-        path: 'content-management',
-        name: 'content_management',
-        component: View,
-        redirect: { name: 'content_categories.index' },
-        children: [
-          {
-            path: 'content-categories',
-            name: 'content_categories.index',
-            component: () => import('@cruds/ContentCategories/Index.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-categories/create',
-            name: 'content_categories.create',
-            component: () => import('@cruds/ContentCategories/Create.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-categories/:id',
-            name: 'content_categories.show',
-            component: () => import('@cruds/ContentCategories/Show.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-categories/:id/edit',
-            name: 'content_categories.edit',
-            component: () => import('@cruds/ContentCategories/Edit.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-tags',
-            name: 'content_tags.index',
-            component: () => import('@cruds/ContentTags/Index.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-tags/create',
-            name: 'content_tags.create',
-            component: () => import('@cruds/ContentTags/Create.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-tags/:id',
-            name: 'content_tags.show',
-            component: () => import('@cruds/ContentTags/Show.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-tags/:id/edit',
-            name: 'content_tags.edit',
-            component: () => import('@cruds/ContentTags/Edit.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-pages',
-            name: 'content_pages.index',
-            component: () => import('@cruds/ContentPages/Index.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          },
-          {
-            path: 'content-pages/create',
-            name: 'content_pages.create',
-            component: () => import('@cruds/ContentPages/Create.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          },
-          {
-            path: 'content-pages/:id',
-            name: 'content_pages.show',
-            component: () => import('@cruds/ContentPages/Show.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          },
-          {
-            path: 'content-pages/:id/edit',
-            name: 'content_pages.edit',
-            component: () => import('@cruds/ContentPages/Edit.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          }
-        ]
-      },
-      {
-        path: 'product-management',
-        name: 'product_management',
-        component: View,
-        redirect: { name: 'product_categories.index' },
-        children: [
-          {
-            path: 'product-categories',
-            name: 'product_categories.index',
-            component: () => import('@cruds/ProductCategories/Index.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-categories/create',
-            name: 'product_categories.create',
-            component: () => import('@cruds/ProductCategories/Create.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-categories/:id',
-            name: 'product_categories.show',
-            component: () => import('@cruds/ProductCategories/Show.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-categories/:id/edit',
-            name: 'product_categories.edit',
-            component: () => import('@cruds/ProductCategories/Edit.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-tags',
-            name: 'product_tags.index',
-            component: () => import('@cruds/ProductTags/Index.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'product-tags/create',
-            name: 'product_tags.create',
-            component: () => import('@cruds/ProductTags/Create.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'product-tags/:id',
-            name: 'product_tags.show',
-            component: () => import('@cruds/ProductTags/Show.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'product-tags/:id/edit',
-            name: 'product_tags.edit',
-            component: () => import('@cruds/ProductTags/Edit.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'products',
-            name: 'products.index',
-            component: () => import('@cruds/Products/Index.vue'),
-            meta: { title: 'cruds.product.title' }
-          },
-          {
-            path: 'products/create',
-            name: 'products.create',
-            component: () => import('@cruds/Products/Create.vue'),
-            meta: { title: 'cruds.product.title' }
-          },
-          {
-            path: 'products/:id',
-            name: 'products.show',
-            component: () => import('@cruds/Products/Show.vue'),
-            meta: { title: 'cruds.product.title' }
-          },
-          {
-            path: 'products/:id/edit',
-            name: 'products.edit',
-            component: () => import('@cruds/Products/Edit.vue'),
-            meta: { title: 'cruds.product.title' }
           }
         ]
       },
@@ -750,12 +750,6 @@ const routes = [
             meta: { title: 'cruds.expenseReport.title' }
           }
         ]
-      },
-      {
-        path: 'dsfs',
-        name: 'dsfs.index',
-        component: () => import('@cruds/Dsfs/Index.vue'),
-        meta: { title: 'cruds.dsf.title' }
       }
     ]
   }

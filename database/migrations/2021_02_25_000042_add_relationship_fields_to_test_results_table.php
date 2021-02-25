@@ -10,9 +10,9 @@ class AddRelationshipFieldsToTestResultsTable extends Migration
     {
         Schema::table('test_results', function (Blueprint $table) {
             $table->unsignedBigInteger('test_id')->nullable();
-            $table->foreign('test_id', 'test_fk_3278711')->references('id')->on('tests');
+            $table->foreign('test_id', 'test_fk_3280790')->references('id')->on('tests');
             $table->unsignedBigInteger('student_id');
-            $table->foreign('student_id', 'student_fk_3278712')->references('id')->on('users');
+            $table->foreign('student_id', 'student_fk_3280791')->references('id')->on('users');
         });
     }
 }

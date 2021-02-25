@@ -10,9 +10,9 @@ class CreateProductProductCategoryPivotTable extends Migration
     {
         Schema::create('product_product_category', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id', 'product_id_fk_3278583')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id', 'product_id_fk_3280650')->references('id')->on('products')->onDelete('cascade');
             $table->unsignedBigInteger('product_category_id');
-            $table->foreign('product_category_id', 'product_category_id_fk_3278583')->references('id')->on('product_categories')->onDelete('cascade');
+            $table->foreign('product_category_id', 'product_category_id_fk_3280650')->references('id')->on('product_categories')->onDelete('cascade');
         });
     }
 }

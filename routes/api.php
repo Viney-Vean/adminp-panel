@@ -20,11 +20,32 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Users
     Route::resource('users', 'UsersApiController');
 
+    // Product Categories
+    Route::post('product-categories/media', 'ProductCategoryApiController@storeMedia')->name('product-categories.storeMedia');
+    Route::resource('product-categories', 'ProductCategoryApiController');
+
+    // Product Tags
+    Route::resource('product-tags', 'ProductTagApiController');
+
+    // Products
+    Route::post('products/media', 'ProductApiController@storeMedia')->name('products.storeMedia');
+    Route::resource('products', 'ProductApiController');
+
     // Contact Companies
     Route::resource('contact-companies', 'ContactCompanyApiController');
 
     // Contact Contacts
     Route::resource('contact-contacts', 'ContactContactsApiController');
+
+    // Content Categories
+    Route::resource('content-categories', 'ContentCategoryApiController');
+
+    // Content Tags
+    Route::resource('content-tags', 'ContentTagApiController');
+
+    // Content Pages
+    Route::post('content-pages/media', 'ContentPageApiController@storeMedia')->name('content-pages.storeMedia');
+    Route::resource('content-pages', 'ContentPageApiController');
 
     // Crm Statuses
     Route::resource('crm-statuses', 'CrmStatusApiController');
@@ -44,27 +65,6 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Faq Questions
     Route::resource('faq-questions', 'FaqQuestionApiController');
-
-    // Content Categories
-    Route::resource('content-categories', 'ContentCategoryApiController');
-
-    // Content Tags
-    Route::resource('content-tags', 'ContentTagApiController');
-
-    // Content Pages
-    Route::post('content-pages/media', 'ContentPageApiController@storeMedia')->name('content-pages.storeMedia');
-    Route::resource('content-pages', 'ContentPageApiController');
-
-    // Product Categories
-    Route::post('product-categories/media', 'ProductCategoryApiController@storeMedia')->name('product-categories.storeMedia');
-    Route::resource('product-categories', 'ProductCategoryApiController');
-
-    // Product Tags
-    Route::resource('product-tags', 'ProductTagApiController');
-
-    // Products
-    Route::post('products/media', 'ProductApiController@storeMedia')->name('products.storeMedia');
-    Route::resource('products', 'ProductApiController');
 
     // Courses
     Route::post('courses/media', 'CoursesApiController@storeMedia')->name('courses.storeMedia');
@@ -104,7 +104,4 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Expense Reports
     Route::apiResource('expense-reports', 'ExpenseReportApiController', ['only' => ['index']]);
-
-    // Dsfs
-    Route::apiResource('dsfs', 'DsfApiController', ['only' => ['index']]);
 });

@@ -12,14 +12,6 @@ return [
             'title'      => 'English',
             'short_code' => 'en',
         ],
-        [
-            'title'      => 'Chinese',
-            'short_code' => 'zh-Hans',
-        ],
-        [
-            'title'      => 'Thai',
-            'short_code' => 'th',
-        ],
     ],
     'registered_user_role'   => 'User',
 ];

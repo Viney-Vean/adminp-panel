@@ -10,7 +10,7 @@ class AddRelationshipFieldsToCrmNotesTable extends Migration
     {
         Schema::table('crm_notes', function (Blueprint $table) {
             $table->unsignedBigInteger('customer_id');
-            $table->foreign('customer_id', 'customer_fk_3278521')->references('id')->on('crm_customers');
+            $table->foreign('customer_id', 'customer_fk_3280717')->references('id')->on('crm_customers');
         });
     }
 }

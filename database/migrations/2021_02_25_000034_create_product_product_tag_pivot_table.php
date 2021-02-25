@@ -10,9 +10,9 @@ class CreateProductProductTagPivotTable extends Migration
     {
         Schema::create('product_product_tag', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id', 'product_id_fk_3278584')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id', 'product_id_fk_3280651')->references('id')->on('products')->onDelete('cascade');
             $table->unsignedBigInteger('product_tag_id');
-            $table->foreign('product_tag_id', 'product_tag_id_fk_3278584')->references('id')->on('product_tags')->onDelete('cascade');
+            $table->foreign('product_tag_id', 'product_tag_id_fk_3280651')->references('id')->on('product_tags')->onDelete('cascade');
         });
     }
 }

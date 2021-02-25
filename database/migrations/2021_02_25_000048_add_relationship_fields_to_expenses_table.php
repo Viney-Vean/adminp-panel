@@ -10,7 +10,7 @@ class AddRelationshipFieldsToExpensesTable extends Migration
     {
         Schema::table('expenses', function (Blueprint $table) {
             $table->unsignedBigInteger('expense_category_id')->nullable();
-            $table->foreign('expense_category_id', 'expense_category_fk_3278736')->references('id')->on('expense_categories');
+            $table->foreign('expense_category_id', 'expense_category_fk_3280815')->references('id')->on('expense_categories');
         });
     }
 }

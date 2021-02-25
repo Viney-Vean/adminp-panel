@@ -10,7 +10,7 @@ class AddRelationshipFieldsToLessonsTable extends Migration
     {
         Schema::table('lessons', function (Blueprint $table) {
             $table->unsignedBigInteger('course_id');
-            $table->foreign('course_id', 'course_fk_3278674')->references('id')->on('courses');
+            $table->foreign('course_id', 'course_fk_3280753')->references('id')->on('courses');
         });
     }
 }

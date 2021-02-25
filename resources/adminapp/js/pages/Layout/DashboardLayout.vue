@@ -60,6 +60,32 @@ export default {
           ]
         },
         {
+          title: 'cruds.productManagement.title',
+          icon: 'table_view',
+          path: { name: 'product_management' },
+          gate: 'product_management_access',
+          children: [
+            {
+              title: 'cruds.productCategory.title',
+              icon: 'table_view',
+              path: { name: 'product_categories.index' },
+              gate: 'product_category_access'
+            },
+            {
+              title: 'cruds.productTag.title',
+              icon: 'table_view',
+              path: { name: 'product_tags.index' },
+              gate: 'product_tag_access'
+            },
+            {
+              title: 'cruds.product.title',
+              icon: 'table_view',
+              path: { name: 'products.index' },
+              gate: 'product_access'
+            }
+          ]
+        },
+        {
           title: 'cruds.contactManagement.title',
           icon: 'import_contacts',
           path: { name: 'contact_management' },
@@ -76,6 +102,32 @@ export default {
               icon: 'fas fa-user-plus',
               path: { name: 'contact_contacts.index' },
               gate: 'contact_contact_access'
+            }
+          ]
+        },
+        {
+          title: 'cruds.contentManagement.title',
+          icon: 'table_view',
+          path: { name: 'content_management' },
+          gate: 'content_management_access',
+          children: [
+            {
+              title: 'cruds.contentCategory.title',
+              icon: 'table_view',
+              path: { name: 'content_categories.index' },
+              gate: 'content_category_access'
+            },
+            {
+              title: 'cruds.contentTag.title',
+              icon: 'table_view',
+              path: { name: 'content_tags.index' },
+              gate: 'content_tag_access'
+            },
+            {
+              title: 'cruds.contentPage.title',
+              icon: 'table_view',
+              path: { name: 'content_pages.index' },
+              gate: 'content_page_access'
             }
           ]
         },
@@ -128,58 +180,6 @@ export default {
               icon: 'table_view',
               path: { name: 'faq_questions.index' },
               gate: 'faq_question_access'
-            }
-          ]
-        },
-        {
-          title: 'cruds.contentManagement.title',
-          icon: 'table_view',
-          path: { name: 'content_management' },
-          gate: 'content_management_access',
-          children: [
-            {
-              title: 'cruds.contentCategory.title',
-              icon: 'table_view',
-              path: { name: 'content_categories.index' },
-              gate: 'content_category_access'
-            },
-            {
-              title: 'cruds.contentTag.title',
-              icon: 'table_view',
-              path: { name: 'content_tags.index' },
-              gate: 'content_tag_access'
-            },
-            {
-              title: 'cruds.contentPage.title',
-              icon: 'table_view',
-              path: { name: 'content_pages.index' },
-              gate: 'content_page_access'
-            }
-          ]
-        },
-        {
-          title: 'cruds.productManagement.title',
-          icon: 'table_view',
-          path: { name: 'product_management' },
-          gate: 'product_management_access',
-          children: [
-            {
-              title: 'cruds.productCategory.title',
-              icon: 'table_view',
-              path: { name: 'product_categories.index' },
-              gate: 'product_category_access'
-            },
-            {
-              title: 'cruds.productTag.title',
-              icon: 'table_view',
-              path: { name: 'product_tags.index' },
-              gate: 'product_tag_access'
-            },
-            {
-              title: 'cruds.product.title',
-              icon: 'table_view',
-              path: { name: 'products.index' },
-              gate: 'product_access'
             }
           ]
         },
@@ -262,12 +262,6 @@ export default {
               gate: 'expense_report_access'
             }
           ]
-        },
-        {
-          title: 'cruds.dsf.title',
-          icon: 'table_view',
-          path: { name: 'dsfs.index' },
-          gate: 'dsf_access'
         }
       ]
     }

@@ -10,10 +10,22 @@ import RolesIndex from './cruds/Roles'
 import RolesSingle from './cruds/Roles/single'
 import UsersIndex from './cruds/Users'
 import UsersSingle from './cruds/Users/single'
+import ProductCategoriesIndex from './cruds/ProductCategories'
+import ProductCategoriesSingle from './cruds/ProductCategories/single'
+import ProductTagsIndex from './cruds/ProductTags'
+import ProductTagsSingle from './cruds/ProductTags/single'
+import ProductsIndex from './cruds/Products'
+import ProductsSingle from './cruds/Products/single'
 import ContactCompaniesIndex from './cruds/ContactCompanies'
 import ContactCompaniesSingle from './cruds/ContactCompanies/single'
 import ContactContactsIndex from './cruds/ContactContacts'
 import ContactContactsSingle from './cruds/ContactContacts/single'
+import ContentCategoriesIndex from './cruds/ContentCategories'
+import ContentCategoriesSingle from './cruds/ContentCategories/single'
+import ContentTagsIndex from './cruds/ContentTags'
+import ContentTagsSingle from './cruds/ContentTags/single'
+import ContentPagesIndex from './cruds/ContentPages'
+import ContentPagesSingle from './cruds/ContentPages/single'
 import CrmStatusesIndex from './cruds/CrmStatuses'
 import CrmStatusesSingle from './cruds/CrmStatuses/single'
 import CrmCustomersIndex from './cruds/CrmCustomers'
@@ -26,18 +38,6 @@ import FaqCategoriesIndex from './cruds/FaqCategories'
 import FaqCategoriesSingle from './cruds/FaqCategories/single'
 import FaqQuestionsIndex from './cruds/FaqQuestions'
 import FaqQuestionsSingle from './cruds/FaqQuestions/single'
-import ContentCategoriesIndex from './cruds/ContentCategories'
-import ContentCategoriesSingle from './cruds/ContentCategories/single'
-import ContentTagsIndex from './cruds/ContentTags'
-import ContentTagsSingle from './cruds/ContentTags/single'
-import ContentPagesIndex from './cruds/ContentPages'
-import ContentPagesSingle from './cruds/ContentPages/single'
-import ProductCategoriesIndex from './cruds/ProductCategories'
-import ProductCategoriesSingle from './cruds/ProductCategories/single'
-import ProductTagsIndex from './cruds/ProductTags'
-import ProductTagsSingle from './cruds/ProductTags/single'
-import ProductsIndex from './cruds/Products'
-import ProductsSingle from './cruds/Products/single'
 import CoursesIndex from './cruds/Courses'
 import CoursesSingle from './cruds/Courses/single'
 import LessonsIndex from './cruds/Lessons'
@@ -61,7 +61,6 @@ import ExpensesSingle from './cruds/Expenses/single'
 import IncomesIndex from './cruds/Incomes'
 import IncomesSingle from './cruds/Incomes/single'
 import ExpenseReports from './cruds/ExpenseReports'
-import Dsfs from './cruds/Dsfs'
 
 Vue.use(Vuex)
 
@@ -77,10 +76,22 @@ export default new Vuex.Store({
     RolesSingle,
     UsersIndex,
     UsersSingle,
+    ProductCategoriesIndex,
+    ProductCategoriesSingle,
+    ProductTagsIndex,
+    ProductTagsSingle,
+    ProductsIndex,
+    ProductsSingle,
     ContactCompaniesIndex,
     ContactCompaniesSingle,
     ContactContactsIndex,
     ContactContactsSingle,
+    ContentCategoriesIndex,
+    ContentCategoriesSingle,
+    ContentTagsIndex,
+    ContentTagsSingle,
+    ContentPagesIndex,
+    ContentPagesSingle,
     CrmStatusesIndex,
     CrmStatusesSingle,
     CrmCustomersIndex,
@@ -93,18 +104,6 @@ export default new Vuex.Store({
     FaqCategoriesSingle,
     FaqQuestionsIndex,
     FaqQuestionsSingle,
-    ContentCategoriesIndex,
-    ContentCategoriesSingle,
-    ContentTagsIndex,
-    ContentTagsSingle,
-    ContentPagesIndex,
-    ContentPagesSingle,
-    ProductCategoriesIndex,
-    ProductCategoriesSingle,
-    ProductTagsIndex,
-    ProductTagsSingle,
-    ProductsIndex,
-    ProductsSingle,
     CoursesIndex,
     CoursesSingle,
     LessonsIndex,
@@ -127,8 +126,7 @@ export default new Vuex.Store({
     ExpensesSingle,
     IncomesIndex,
     IncomesSingle,
-    ExpenseReports,
-    Dsfs
+    ExpenseReports
   },
   strict: debug
 })

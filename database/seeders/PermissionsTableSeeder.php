@@ -76,303 +76,303 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 17,
-                'title' => 'contact_management_access',
-            ],
-            [
-                'id'    => 18,
-                'title' => 'contact_company_create',
-            ],
-            [
-                'id'    => 19,
-                'title' => 'contact_company_edit',
-            ],
-            [
-                'id'    => 20,
-                'title' => 'contact_company_show',
-            ],
-            [
-                'id'    => 21,
-                'title' => 'contact_company_delete',
-            ],
-            [
-                'id'    => 22,
-                'title' => 'contact_company_access',
-            ],
-            [
-                'id'    => 23,
-                'title' => 'contact_contact_create',
-            ],
-            [
-                'id'    => 24,
-                'title' => 'contact_contact_edit',
-            ],
-            [
-                'id'    => 25,
-                'title' => 'contact_contact_show',
-            ],
-            [
-                'id'    => 26,
-                'title' => 'contact_contact_delete',
-            ],
-            [
-                'id'    => 27,
-                'title' => 'contact_contact_access',
-            ],
-            [
-                'id'    => 28,
-                'title' => 'basic_c_r_m_access',
-            ],
-            [
-                'id'    => 29,
-                'title' => 'crm_status_create',
-            ],
-            [
-                'id'    => 30,
-                'title' => 'crm_status_edit',
-            ],
-            [
-                'id'    => 31,
-                'title' => 'crm_status_show',
-            ],
-            [
-                'id'    => 32,
-                'title' => 'crm_status_delete',
-            ],
-            [
-                'id'    => 33,
-                'title' => 'crm_status_access',
-            ],
-            [
-                'id'    => 34,
-                'title' => 'crm_customer_create',
-            ],
-            [
-                'id'    => 35,
-                'title' => 'crm_customer_edit',
-            ],
-            [
-                'id'    => 36,
-                'title' => 'crm_customer_show',
-            ],
-            [
-                'id'    => 37,
-                'title' => 'crm_customer_delete',
-            ],
-            [
-                'id'    => 38,
-                'title' => 'crm_customer_access',
-            ],
-            [
-                'id'    => 39,
-                'title' => 'crm_note_create',
-            ],
-            [
-                'id'    => 40,
-                'title' => 'crm_note_edit',
-            ],
-            [
-                'id'    => 41,
-                'title' => 'crm_note_show',
-            ],
-            [
-                'id'    => 42,
-                'title' => 'crm_note_delete',
-            ],
-            [
-                'id'    => 43,
-                'title' => 'crm_note_access',
-            ],
-            [
-                'id'    => 44,
-                'title' => 'crm_document_create',
-            ],
-            [
-                'id'    => 45,
-                'title' => 'crm_document_edit',
-            ],
-            [
-                'id'    => 46,
-                'title' => 'crm_document_show',
-            ],
-            [
-                'id'    => 47,
-                'title' => 'crm_document_delete',
-            ],
-            [
-                'id'    => 48,
-                'title' => 'crm_document_access',
-            ],
-            [
-                'id'    => 49,
-                'title' => 'faq_management_access',
-            ],
-            [
-                'id'    => 50,
-                'title' => 'faq_category_create',
-            ],
-            [
-                'id'    => 51,
-                'title' => 'faq_category_edit',
-            ],
-            [
-                'id'    => 52,
-                'title' => 'faq_category_show',
-            ],
-            [
-                'id'    => 53,
-                'title' => 'faq_category_delete',
-            ],
-            [
-                'id'    => 54,
-                'title' => 'faq_category_access',
-            ],
-            [
-                'id'    => 55,
-                'title' => 'faq_question_create',
-            ],
-            [
-                'id'    => 56,
-                'title' => 'faq_question_edit',
-            ],
-            [
-                'id'    => 57,
-                'title' => 'faq_question_show',
-            ],
-            [
-                'id'    => 58,
-                'title' => 'faq_question_delete',
-            ],
-            [
-                'id'    => 59,
-                'title' => 'faq_question_access',
-            ],
-            [
-                'id'    => 60,
-                'title' => 'content_management_access',
-            ],
-            [
-                'id'    => 61,
-                'title' => 'content_category_create',
-            ],
-            [
-                'id'    => 62,
-                'title' => 'content_category_edit',
-            ],
-            [
-                'id'    => 63,
-                'title' => 'content_category_show',
-            ],
-            [
-                'id'    => 64,
-                'title' => 'content_category_delete',
-            ],
-            [
-                'id'    => 65,
-                'title' => 'content_category_access',
-            ],
-            [
-                'id'    => 66,
-                'title' => 'content_tag_create',
-            ],
-            [
-                'id'    => 67,
-                'title' => 'content_tag_edit',
-            ],
-            [
-                'id'    => 68,
-                'title' => 'content_tag_show',
-            ],
-            [
-                'id'    => 69,
-                'title' => 'content_tag_delete',
-            ],
-            [
-                'id'    => 70,
-                'title' => 'content_tag_access',
-            ],
-            [
-                'id'    => 71,
-                'title' => 'content_page_create',
-            ],
-            [
-                'id'    => 72,
-                'title' => 'content_page_edit',
-            ],
-            [
-                'id'    => 73,
-                'title' => 'content_page_show',
-            ],
-            [
-                'id'    => 74,
-                'title' => 'content_page_delete',
-            ],
-            [
-                'id'    => 75,
-                'title' => 'content_page_access',
-            ],
-            [
-                'id'    => 76,
                 'title' => 'product_management_access',
             ],
             [
-                'id'    => 77,
+                'id'    => 18,
                 'title' => 'product_category_create',
             ],
             [
-                'id'    => 78,
+                'id'    => 19,
                 'title' => 'product_category_edit',
             ],
             [
-                'id'    => 79,
+                'id'    => 20,
                 'title' => 'product_category_show',
             ],
             [
-                'id'    => 80,
+                'id'    => 21,
                 'title' => 'product_category_delete',
             ],
             [
-                'id'    => 81,
+                'id'    => 22,
                 'title' => 'product_category_access',
             ],
             [
-                'id'    => 82,
+                'id'    => 23,
                 'title' => 'product_tag_create',
             ],
             [
-                'id'    => 83,
+                'id'    => 24,
                 'title' => 'product_tag_edit',
             ],
             [
-                'id'    => 84,
+                'id'    => 25,
                 'title' => 'product_tag_show',
             ],
             [
-                'id'    => 85,
+                'id'    => 26,
                 'title' => 'product_tag_delete',
             ],
             [
-                'id'    => 86,
+                'id'    => 27,
                 'title' => 'product_tag_access',
             ],
             [
-                'id'    => 87,
+                'id'    => 28,
                 'title' => 'product_create',
             ],
             [
-                'id'    => 88,
+                'id'    => 29,
                 'title' => 'product_edit',
             ],
             [
-                'id'    => 89,
+                'id'    => 30,
                 'title' => 'product_show',
             ],
             [
-                'id'    => 90,
+                'id'    => 31,
                 'title' => 'product_delete',
             ],
             [
-                'id'    => 91,
+                'id'    => 32,
                 'title' => 'product_access',
+            ],
+            [
+                'id'    => 33,
+                'title' => 'contact_management_access',
+            ],
+            [
+                'id'    => 34,
+                'title' => 'contact_company_create',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'contact_company_edit',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'contact_company_show',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'contact_company_delete',
+            ],
+            [
+                'id'    => 38,
+                'title' => 'contact_company_access',
+            ],
+            [
+                'id'    => 39,
+                'title' => 'contact_contact_create',
+            ],
+            [
+                'id'    => 40,
+                'title' => 'contact_contact_edit',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'contact_contact_show',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'contact_contact_delete',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'contact_contact_access',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'content_management_access',
+            ],
+            [
+                'id'    => 45,
+                'title' => 'content_category_create',
+            ],
+            [
+                'id'    => 46,
+                'title' => 'content_category_edit',
+            ],
+            [
+                'id'    => 47,
+                'title' => 'content_category_show',
+            ],
+            [
+                'id'    => 48,
+                'title' => 'content_category_delete',
+            ],
+            [
+                'id'    => 49,
+                'title' => 'content_category_access',
+            ],
+            [
+                'id'    => 50,
+                'title' => 'content_tag_create',
+            ],
+            [
+                'id'    => 51,
+                'title' => 'content_tag_edit',
+            ],
+            [
+                'id'    => 52,
+                'title' => 'content_tag_show',
+            ],
+            [
+                'id'    => 53,
+                'title' => 'content_tag_delete',
+            ],
+            [
+                'id'    => 54,
+                'title' => 'content_tag_access',
+            ],
+            [
+                'id'    => 55,
+                'title' => 'content_page_create',
+            ],
+            [
+                'id'    => 56,
+                'title' => 'content_page_edit',
+            ],
+            [
+                'id'    => 57,
+                'title' => 'content_page_show',
+            ],
+            [
+                'id'    => 58,
+                'title' => 'content_page_delete',
+            ],
+            [
+                'id'    => 59,
+                'title' => 'content_page_access',
+            ],
+            [
+                'id'    => 60,
+                'title' => 'basic_c_r_m_access',
+            ],
+            [
+                'id'    => 61,
+                'title' => 'crm_status_create',
+            ],
+            [
+                'id'    => 62,
+                'title' => 'crm_status_edit',
+            ],
+            [
+                'id'    => 63,
+                'title' => 'crm_status_show',
+            ],
+            [
+                'id'    => 64,
+                'title' => 'crm_status_delete',
+            ],
+            [
+                'id'    => 65,
+                'title' => 'crm_status_access',
+            ],
+            [
+                'id'    => 66,
+                'title' => 'crm_customer_create',
+            ],
+            [
+                'id'    => 67,
+                'title' => 'crm_customer_edit',
+            ],
+            [
+                'id'    => 68,
+                'title' => 'crm_customer_show',
+            ],
+            [
+                'id'    => 69,
+                'title' => 'crm_customer_delete',
+            ],
+            [
+                'id'    => 70,
+                'title' => 'crm_customer_access',
+            ],
+            [
+                'id'    => 71,
+                'title' => 'crm_note_create',
+            ],
+            [
+                'id'    => 72,
+                'title' => 'crm_note_edit',
+            ],
+            [
+                'id'    => 73,
+                'title' => 'crm_note_show',
+            ],
+            [
+                'id'    => 74,
+                'title' => 'crm_note_delete',
+            ],
+            [
+                'id'    => 75,
+                'title' => 'crm_note_access',
+            ],
+            [
+                'id'    => 76,
+                'title' => 'crm_document_create',
+            ],
+            [
+                'id'    => 77,
+                'title' => 'crm_document_edit',
+            ],
+            [
+                'id'    => 78,
+                'title' => 'crm_document_show',
+            ],
+            [
+                'id'    => 79,
+                'title' => 'crm_document_delete',
+            ],
+            [
+                'id'    => 80,
+                'title' => 'crm_document_access',
+            ],
+            [
+                'id'    => 81,
+                'title' => 'faq_management_access',
+            ],
+            [
+                'id'    => 82,
+                'title' => 'faq_category_create',
+            ],
+            [
+                'id'    => 83,
+                'title' => 'faq_category_edit',
+            ],
+            [
+                'id'    => 84,
+                'title' => 'faq_category_show',
+            ],
+            [
+                'id'    => 85,
+                'title' => 'faq_category_delete',
+            ],
+            [
+                'id'    => 86,
+                'title' => 'faq_category_access',
+            ],
+            [
+                'id'    => 87,
+                'title' => 'faq_question_create',
+            ],
+            [
+                'id'    => 88,
+                'title' => 'faq_question_edit',
+            ],
+            [
+                'id'    => 89,
+                'title' => 'faq_question_show',
+            ],
+            [
+                'id'    => 90,
+                'title' => 'faq_question_delete',
+            ],
+            [
+                'id'    => 91,
+                'title' => 'faq_question_access',
             ],
             [
                 'id'    => 92,
@@ -601,10 +601,6 @@ class PermissionsTableSeeder extends Seeder
             [
                 'id'    => 148,
                 'title' => 'expense_report_access',
-            ],
-            [
-                'id'    => 149,
-                'title' => 'dsf_access',
             ],
         ];
 

@@ -10,7 +10,7 @@ class AddRelationshipFieldsToContactContactsTable extends Migration
     {
         Schema::table('contact_contacts', function (Blueprint $table) {
             $table->unsignedBigInteger('company_id');
-            $table->foreign('company_id', 'company_fk_3278491')->references('id')->on('contact_companies');
+            $table->foreign('company_id', 'company_fk_3280665')->references('id')->on('contact_companies');
         });
     }
 }

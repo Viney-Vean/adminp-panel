@@ -10,7 +10,7 @@ class AddRelationshipFieldsToQuestionOptionsTable extends Migration
     {
         Schema::table('question_options', function (Blueprint $table) {
             $table->unsignedBigInteger('question_id')->nullable();
-            $table->foreign('question_id', 'question_fk_3278704')->references('id')->on('questions');
+            $table->foreign('question_id', 'question_fk_3280783')->references('id')->on('questions');
         });
     }
 }

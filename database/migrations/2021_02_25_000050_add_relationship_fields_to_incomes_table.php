@@ -10,7 +10,7 @@ class AddRelationshipFieldsToIncomesTable extends Migration
     {
         Schema::table('incomes', function (Blueprint $table) {
             $table->unsignedBigInteger('income_category_id')->nullable();
-            $table->foreign('income_category_id', 'income_category_fk_3278744')->references('id')->on('income_categories');
+            $table->foreign('income_category_id', 'income_category_fk_3280823')->references('id')->on('income_categories');
         });
     }
 }

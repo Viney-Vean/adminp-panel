@@ -23,18 +23,20 @@ class User extends Authenticatable
         'password',
     ];
 
-    protected $orderable = [
-        'id',
-        'name',
-        'email',
-        'email_verified_at',
-    ];
-
     protected $dates = [
         'email_verified_at',
         'created_at',
         'updated_at',
         'deleted_at',
+    ];
+
+    protected $orderable = [
+        'id',
+        'name',
+        'email',
+        'email_verified_at',
+        'branch.branch',
+        'defualt_branch.branch',
     ];
 
     protected $filterable = [
@@ -43,6 +45,9 @@ class User extends Authenticatable
         'email',
         'email_verified_at',
         'roles.title',
+        'branch.branch',
+        'access_branch.branch',
+        'defualt_branch.branch',
     ];
 
     protected $fillable = [
@@ -51,6 +56,8 @@ class User extends Authenticatable
         'email_verified_at',
         'password',
         'remember_token',
+        'branch_id',
+        'defualt_branch_id',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -86,5 +93,20 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class);
+    }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
+    }
+
+    public function accessBranch()
+    {
+        return $this->belongsToMany(Branch::class);
+    }
+
+    public function defualtBranch()
+    {
+        return $this->belongsTo(Branch::class);
     }
 }

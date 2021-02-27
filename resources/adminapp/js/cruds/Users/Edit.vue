@@ -102,6 +102,73 @@
                       @search.blur="clearFocus"
                     />
                   </div>
+                  <div
+                    class="form-group bmd-form-group"
+                    :class="{
+                      'has-items': entry.branch_id !== null,
+                      'is-focused': activeField == 'branch'
+                    }"
+                  >
+                    <label class="bmd-label-floating">{{
+                      $t('cruds.user.fields.branch')
+                    }}</label>
+                    <v-select
+                      name="branch"
+                      label="branch"
+                      :key="'branch-field'"
+                      :value="entry.branch_id"
+                      :options="lists.branch"
+                      :reduce="entry => entry.id"
+                      @input="updateBranch"
+                      @search.focus="focusField('branch')"
+                      @search.blur="clearFocus"
+                    />
+                  </div>
+                  <div
+                    class="form-group bmd-form-group"
+                    :class="{
+                      'has-items': entry.access_branch.length !== 0,
+                      'is-focused': activeField == 'access_branch'
+                    }"
+                  >
+                    <label class="bmd-label-floating">{{
+                      $t('cruds.user.fields.access_branch')
+                    }}</label>
+                    <v-select
+                      name="access_branch"
+                      label="branch"
+                      :key="'access_branch-field'"
+                      :value="entry.access_branch"
+                      :options="lists.access_branch"
+                      :closeOnSelect="false"
+                      multiple
+                      @input="updateAccessBranch"
+                      @search.focus="focusField('access_branch')"
+                      @search.blur="clearFocus"
+                    />
+                  </div>
+                  <div
+                    class="form-group bmd-form-group"
+                    :class="{
+                      'has-items': entry.defualt_branch_id !== null,
+                      'is-focused': activeField == 'defualt_branch'
+                    }"
+                  >
+                    <label class="bmd-label-floating">{{
+                      $t('cruds.user.fields.defualt_branch')
+                    }}</label>
+                    <v-select
+                      name="defualt_branch"
+                      label="branch"
+                      :key="'defualt_branch-field'"
+                      :value="entry.defualt_branch_id"
+                      :options="lists.defualt_branch"
+                      :reduce="entry => entry.id"
+                      @input="updateDefualtBranch"
+                      @search.focus="focusField('defualt_branch')"
+                      @search.blur="clearFocus"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,7 +222,10 @@ export default {
       'setName',
       'setEmail',
       'setPassword',
-      'setRoles'
+      'setRoles',
+      'setBranch',
+      'setAccessBranch',
+      'setDefualtBranch'
     ]),
     updateName(e) {
       this.setName(e.target.value)
@@ -168,6 +238,15 @@ export default {
     },
     updateRoles(value) {
       this.setRoles(value)
+    },
+    updateBranch(value) {
+      this.setBranch(value)
+    },
+    updateAccessBranch(value) {
+      this.setAccessBranch(value)
+    },
+    updateDefualtBranch(value) {
+      this.setDefualtBranch(value)
     },
     submitForm() {
       this.updateData()

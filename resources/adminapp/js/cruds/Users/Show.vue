@@ -62,6 +62,39 @@
                           </datatable-list>
                         </td>
                       </tr>
+                      <tr>
+                        <td class="text-primary">
+                          {{ $t('cruds.user.fields.branch') }}
+                        </td>
+                        <td>
+                          <datatable-single :row="entry" field="branch.branch">
+                          </datatable-single>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-primary">
+                          {{ $t('cruds.user.fields.access_branch') }}
+                        </td>
+                        <td>
+                          <datatable-list
+                            :row="entry"
+                            field="access_branch.branch"
+                          >
+                          </datatable-list>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-primary">
+                          {{ $t('cruds.user.fields.defualt_branch') }}
+                        </td>
+                        <td>
+                          <datatable-single
+                            :row="entry"
+                            field="defualt_branch.branch"
+                          >
+                          </datatable-single>
+                        </td>
+                      </tr>
                     </tbody>
                   </div>
                 </div>
@@ -77,10 +110,12 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import DatatableList from '@components/Datatables/DatatableList'
+import DatatableSingle from '@components/Datatables/DatatableSingle'
 
 export default {
   components: {
-    DatatableList
+    DatatableList,
+    DatatableSingle
   },
   data() {
     return {}

@@ -8,12 +8,18 @@ function initialState() {
       password: null,
       roles: [],
       remember_token: '',
+      branch_id: null,
+      access_branch: [],
+      defualt_branch_id: null,
       created_at: '',
       updated_at: '',
       deleted_at: ''
     },
     lists: {
-      roles: []
+      roles: [],
+      branch: [],
+      access_branch: [],
+      defualt_branch: []
     },
     loading: false
   }
@@ -109,6 +115,15 @@ const actions = {
   setRememberToken({ commit }, value) {
     commit('setRememberToken', value)
   },
+  setBranch({ commit }, value) {
+    commit('setBranch', value)
+  },
+  setAccessBranch({ commit }, value) {
+    commit('setAccessBranch', value)
+  },
+  setDefualtBranch({ commit }, value) {
+    commit('setDefualtBranch', value)
+  },
   setCreatedAt({ commit }, value) {
     commit('setCreatedAt', value)
   },
@@ -160,6 +175,15 @@ const mutations = {
   },
   setRememberToken(state, value) {
     state.entry.remember_token = value
+  },
+  setBranch(state, value) {
+    state.entry.branch_id = value
+  },
+  setAccessBranch(state, value) {
+    state.entry.access_branch = value
+  },
+  setDefualtBranch(state, value) {
+    state.entry.defualt_branch_id = value
   },
   setCreatedAt(state, value) {
     state.entry.created_at = value

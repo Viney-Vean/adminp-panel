@@ -18,6 +18,182 @@ const routes = [
         meta: { title: 'global.dashboard' }
       },
       {
+        path: 'company-management',
+        name: 'company_management',
+        component: View,
+        redirect: { name: 'branches.index' },
+        children: [
+          {
+            path: 'branches',
+            name: 'branches.index',
+            component: () => import('@cruds/Branches/Index.vue'),
+            meta: { title: 'cruds.branch.title' }
+          },
+          {
+            path: 'branches/create',
+            name: 'branches.create',
+            component: () => import('@cruds/Branches/Create.vue'),
+            meta: { title: 'cruds.branch.title' }
+          },
+          {
+            path: 'branches/:id',
+            name: 'branches.show',
+            component: () => import('@cruds/Branches/Show.vue'),
+            meta: { title: 'cruds.branch.title' }
+          },
+          {
+            path: 'branches/:id/edit',
+            name: 'branches.edit',
+            component: () => import('@cruds/Branches/Edit.vue'),
+            meta: { title: 'cruds.branch.title' }
+          },
+          {
+            path: 'companies',
+            name: 'companies.index',
+            component: () => import('@cruds/Companies/Index.vue'),
+            meta: { title: 'cruds.company.title' }
+          },
+          {
+            path: 'companies/create',
+            name: 'companies.create',
+            component: () => import('@cruds/Companies/Create.vue'),
+            meta: { title: 'cruds.company.title' }
+          },
+          {
+            path: 'companies/:id',
+            name: 'companies.show',
+            component: () => import('@cruds/Companies/Show.vue'),
+            meta: { title: 'cruds.company.title' }
+          },
+          {
+            path: 'companies/:id/edit',
+            name: 'companies.edit',
+            component: () => import('@cruds/Companies/Edit.vue'),
+            meta: { title: 'cruds.company.title' }
+          },
+          {
+            path: 'positions',
+            name: 'positions.index',
+            component: () => import('@cruds/Positions/Index.vue'),
+            meta: { title: 'cruds.position.title' }
+          },
+          {
+            path: 'positions/create',
+            name: 'positions.create',
+            component: () => import('@cruds/Positions/Create.vue'),
+            meta: { title: 'cruds.position.title' }
+          },
+          {
+            path: 'positions/:id',
+            name: 'positions.show',
+            component: () => import('@cruds/Positions/Show.vue'),
+            meta: { title: 'cruds.position.title' }
+          },
+          {
+            path: 'positions/:id/edit',
+            name: 'positions.edit',
+            component: () => import('@cruds/Positions/Edit.vue'),
+            meta: { title: 'cruds.position.title' }
+          },
+          {
+            path: 'officers',
+            name: 'officers.index',
+            component: () => import('@cruds/Officers/Index.vue'),
+            meta: { title: 'cruds.officer.title' }
+          },
+          {
+            path: 'officers/create',
+            name: 'officers.create',
+            component: () => import('@cruds/Officers/Create.vue'),
+            meta: { title: 'cruds.officer.title' }
+          },
+          {
+            path: 'officers/:id',
+            name: 'officers.show',
+            component: () => import('@cruds/Officers/Show.vue'),
+            meta: { title: 'cruds.officer.title' }
+          },
+          {
+            path: 'officers/:id/edit',
+            name: 'officers.edit',
+            component: () => import('@cruds/Officers/Edit.vue'),
+            meta: { title: 'cruds.officer.title' }
+          },
+          {
+            path: 'collection-settings',
+            name: 'collection_settings.index',
+            component: () => import('@cruds/CollectionSettings/Index.vue'),
+            meta: { title: 'cruds.collectionSetting.title' }
+          },
+          {
+            path: 'collection-settings/create',
+            name: 'collection_settings.create',
+            component: () => import('@cruds/CollectionSettings/Create.vue'),
+            meta: { title: 'cruds.collectionSetting.title' }
+          },
+          {
+            path: 'collection-settings/:id',
+            name: 'collection_settings.show',
+            component: () => import('@cruds/CollectionSettings/Show.vue'),
+            meta: { title: 'cruds.collectionSetting.title' }
+          },
+          {
+            path: 'collection-settings/:id/edit',
+            name: 'collection_settings.edit',
+            component: () => import('@cruds/CollectionSettings/Edit.vue'),
+            meta: { title: 'cruds.collectionSetting.title' }
+          },
+          {
+            path: 'system-dates',
+            name: 'system_dates.index',
+            component: () => import('@cruds/SystemDates/Index.vue'),
+            meta: { title: 'cruds.systemDate.title' }
+          },
+          {
+            path: 'system-dates/create',
+            name: 'system_dates.create',
+            component: () => import('@cruds/SystemDates/Create.vue'),
+            meta: { title: 'cruds.systemDate.title' }
+          },
+          {
+            path: 'system-dates/:id',
+            name: 'system_dates.show',
+            component: () => import('@cruds/SystemDates/Show.vue'),
+            meta: { title: 'cruds.systemDate.title' }
+          },
+          {
+            path: 'system-dates/:id/edit',
+            name: 'system_dates.edit',
+            component: () => import('@cruds/SystemDates/Edit.vue'),
+            meta: { title: 'cruds.systemDate.title' }
+          },
+          {
+            path: 'system-settings',
+            name: 'system_settings.index',
+            component: () => import('@cruds/SystemSettings/Index.vue'),
+            meta: { title: 'cruds.systemSetting.title' }
+          },
+          {
+            path: 'system-settings/create',
+            name: 'system_settings.create',
+            component: () => import('@cruds/SystemSettings/Create.vue'),
+            meta: { title: 'cruds.systemSetting.title' }
+          },
+          {
+            path: 'system-settings/:id',
+            name: 'system_settings.show',
+            component: () => import('@cruds/SystemSettings/Show.vue'),
+            meta: { title: 'cruds.systemSetting.title' }
+          },
+          {
+            path: 'system-settings/:id/edit',
+            name: 'system_settings.edit',
+            component: () => import('@cruds/SystemSettings/Edit.vue'),
+            meta: { title: 'cruds.systemSetting.title' }
+          }
+        ]
+      },
+      {
         path: 'user-management',
         name: 'user_management',
         component: View,
@@ -98,162 +274,438 @@ const routes = [
         ]
       },
       {
-        path: 'contact-management',
-        name: 'contact_management',
+        path: 'chart-of-account-management',
+        name: 'chart_of_account_management',
         component: View,
-        redirect: { name: 'contact_companies.index' },
+        redirect: { name: 'currencies.index' },
         children: [
           {
-            path: 'contact-companies',
-            name: 'contact_companies.index',
-            component: () => import('@cruds/ContactCompanies/Index.vue'),
-            meta: { title: 'cruds.contactCompany.title' }
+            path: 'currencies',
+            name: 'currencies.index',
+            component: () => import('@cruds/Currencies/Index.vue'),
+            meta: { title: 'cruds.currency.title' }
           },
           {
-            path: 'contact-companies/create',
-            name: 'contact_companies.create',
-            component: () => import('@cruds/ContactCompanies/Create.vue'),
-            meta: { title: 'cruds.contactCompany.title' }
+            path: 'currencies/create',
+            name: 'currencies.create',
+            component: () => import('@cruds/Currencies/Create.vue'),
+            meta: { title: 'cruds.currency.title' }
           },
           {
-            path: 'contact-companies/:id',
-            name: 'contact_companies.show',
-            component: () => import('@cruds/ContactCompanies/Show.vue'),
-            meta: { title: 'cruds.contactCompany.title' }
+            path: 'currencies/:id',
+            name: 'currencies.show',
+            component: () => import('@cruds/Currencies/Show.vue'),
+            meta: { title: 'cruds.currency.title' }
           },
           {
-            path: 'contact-companies/:id/edit',
-            name: 'contact_companies.edit',
-            component: () => import('@cruds/ContactCompanies/Edit.vue'),
-            meta: { title: 'cruds.contactCompany.title' }
+            path: 'currencies/:id/edit',
+            name: 'currencies.edit',
+            component: () => import('@cruds/Currencies/Edit.vue'),
+            meta: { title: 'cruds.currency.title' }
           },
           {
-            path: 'contact-contacts',
-            name: 'contact_contacts.index',
-            component: () => import('@cruds/ContactContacts/Index.vue'),
-            meta: { title: 'cruds.contactContact.title' }
+            path: 'account-types',
+            name: 'account_types.index',
+            component: () => import('@cruds/AccountTypes/Index.vue'),
+            meta: { title: 'cruds.accountType.title' }
           },
           {
-            path: 'contact-contacts/create',
-            name: 'contact_contacts.create',
-            component: () => import('@cruds/ContactContacts/Create.vue'),
-            meta: { title: 'cruds.contactContact.title' }
+            path: 'account-types/create',
+            name: 'account_types.create',
+            component: () => import('@cruds/AccountTypes/Create.vue'),
+            meta: { title: 'cruds.accountType.title' }
           },
           {
-            path: 'contact-contacts/:id',
-            name: 'contact_contacts.show',
-            component: () => import('@cruds/ContactContacts/Show.vue'),
-            meta: { title: 'cruds.contactContact.title' }
+            path: 'account-types/:id',
+            name: 'account_types.show',
+            component: () => import('@cruds/AccountTypes/Show.vue'),
+            meta: { title: 'cruds.accountType.title' }
           },
           {
-            path: 'contact-contacts/:id/edit',
-            name: 'contact_contacts.edit',
-            component: () => import('@cruds/ContactContacts/Edit.vue'),
-            meta: { title: 'cruds.contactContact.title' }
+            path: 'account-types/:id/edit',
+            name: 'account_types.edit',
+            component: () => import('@cruds/AccountTypes/Edit.vue'),
+            meta: { title: 'cruds.accountType.title' }
+          },
+          {
+            path: 'chart-of-accounts',
+            name: 'chart_of_accounts.index',
+            component: () => import('@cruds/ChartOfAccounts/Index.vue'),
+            meta: { title: 'cruds.chartOfAccount.title' }
+          },
+          {
+            path: 'chart-of-accounts/create',
+            name: 'chart_of_accounts.create',
+            component: () => import('@cruds/ChartOfAccounts/Create.vue'),
+            meta: { title: 'cruds.chartOfAccount.title' }
+          },
+          {
+            path: 'chart-of-accounts/:id',
+            name: 'chart_of_accounts.show',
+            component: () => import('@cruds/ChartOfAccounts/Show.vue'),
+            meta: { title: 'cruds.chartOfAccount.title' }
+          },
+          {
+            path: 'chart-of-accounts/:id/edit',
+            name: 'chart_of_accounts.edit',
+            component: () => import('@cruds/ChartOfAccounts/Edit.vue'),
+            meta: { title: 'cruds.chartOfAccount.title' }
+          },
+          {
+            path: 'account-product-types',
+            name: 'account_product_types.index',
+            component: () => import('@cruds/AccountProductTypes/Index.vue'),
+            meta: { title: 'cruds.accountProductType.title' }
+          },
+          {
+            path: 'account-product-types/create',
+            name: 'account_product_types.create',
+            component: () => import('@cruds/AccountProductTypes/Create.vue'),
+            meta: { title: 'cruds.accountProductType.title' }
+          },
+          {
+            path: 'account-product-types/:id',
+            name: 'account_product_types.show',
+            component: () => import('@cruds/AccountProductTypes/Show.vue'),
+            meta: { title: 'cruds.accountProductType.title' }
+          },
+          {
+            path: 'account-product-types/:id/edit',
+            name: 'account_product_types.edit',
+            component: () => import('@cruds/AccountProductTypes/Edit.vue'),
+            meta: { title: 'cruds.accountProductType.title' }
+          },
+          {
+            path: 'account-products',
+            name: 'account_products.index',
+            component: () => import('@cruds/AccountProducts/Index.vue'),
+            meta: { title: 'cruds.accountProduct.title' }
+          },
+          {
+            path: 'account-products/create',
+            name: 'account_products.create',
+            component: () => import('@cruds/AccountProducts/Create.vue'),
+            meta: { title: 'cruds.accountProduct.title' }
+          },
+          {
+            path: 'account-products/:id',
+            name: 'account_products.show',
+            component: () => import('@cruds/AccountProducts/Show.vue'),
+            meta: { title: 'cruds.accountProduct.title' }
+          },
+          {
+            path: 'account-products/:id/edit',
+            name: 'account_products.edit',
+            component: () => import('@cruds/AccountProducts/Edit.vue'),
+            meta: { title: 'cruds.accountProduct.title' }
+          },
+          {
+            path: 'accounts',
+            name: 'accounts.index',
+            component: () => import('@cruds/Accounts/Index.vue'),
+            meta: { title: 'cruds.account.title' }
+          },
+          {
+            path: 'accounts/create',
+            name: 'accounts.create',
+            component: () => import('@cruds/Accounts/Create.vue'),
+            meta: { title: 'cruds.account.title' }
+          },
+          {
+            path: 'accounts/:id',
+            name: 'accounts.show',
+            component: () => import('@cruds/Accounts/Show.vue'),
+            meta: { title: 'cruds.account.title' }
+          },
+          {
+            path: 'accounts/:id/edit',
+            name: 'accounts.edit',
+            component: () => import('@cruds/Accounts/Edit.vue'),
+            meta: { title: 'cruds.account.title' }
+          },
+          {
+            path: 'provisions',
+            name: 'provisions.index',
+            component: () => import('@cruds/Provisions/Index.vue'),
+            meta: { title: 'cruds.provision.title' }
+          },
+          {
+            path: 'provisions/create',
+            name: 'provisions.create',
+            component: () => import('@cruds/Provisions/Create.vue'),
+            meta: { title: 'cruds.provision.title' }
+          },
+          {
+            path: 'provisions/:id',
+            name: 'provisions.show',
+            component: () => import('@cruds/Provisions/Show.vue'),
+            meta: { title: 'cruds.provision.title' }
+          },
+          {
+            path: 'provisions/:id/edit',
+            name: 'provisions.edit',
+            component: () => import('@cruds/Provisions/Edit.vue'),
+            meta: { title: 'cruds.provision.title' }
+          },
+          {
+            path: 'loan-products',
+            name: 'loan_products.index',
+            component: () => import('@cruds/LoanProducts/Index.vue'),
+            meta: { title: 'cruds.loanProduct.title' }
+          },
+          {
+            path: 'loan-products/create',
+            name: 'loan_products.create',
+            component: () => import('@cruds/LoanProducts/Create.vue'),
+            meta: { title: 'cruds.loanProduct.title' }
+          },
+          {
+            path: 'loan-products/:id',
+            name: 'loan_products.show',
+            component: () => import('@cruds/LoanProducts/Show.vue'),
+            meta: { title: 'cruds.loanProduct.title' }
+          },
+          {
+            path: 'loan-products/:id/edit',
+            name: 'loan_products.edit',
+            component: () => import('@cruds/LoanProducts/Edit.vue'),
+            meta: { title: 'cruds.loanProduct.title' }
+          },
+          {
+            path: 'loan-product-provisions',
+            name: 'loan_product_provisions.index',
+            component: () => import('@cruds/LoanProductProvisions/Index.vue'),
+            meta: { title: 'cruds.loanProductProvision.title' }
+          },
+          {
+            path: 'loan-product-provisions/create',
+            name: 'loan_product_provisions.create',
+            component: () => import('@cruds/LoanProductProvisions/Create.vue'),
+            meta: { title: 'cruds.loanProductProvision.title' }
+          },
+          {
+            path: 'loan-product-provisions/:id',
+            name: 'loan_product_provisions.show',
+            component: () => import('@cruds/LoanProductProvisions/Show.vue'),
+            meta: { title: 'cruds.loanProductProvision.title' }
+          },
+          {
+            path: 'loan-product-provisions/:id/edit',
+            name: 'loan_product_provisions.edit',
+            component: () => import('@cruds/LoanProductProvisions/Edit.vue'),
+            meta: { title: 'cruds.loanProductProvision.title' }
+          },
+          {
+            path: 'account-entries',
+            name: 'account_entries.index',
+            component: () => import('@cruds/AccountEntries/Index.vue'),
+            meta: { title: 'cruds.accountEntry.title' }
+          },
+          {
+            path: 'account-entries/:id',
+            name: 'account_entries.show',
+            component: () => import('@cruds/AccountEntries/Show.vue'),
+            meta: { title: 'cruds.accountEntry.title' }
+          },
+          {
+            path: 'journals',
+            name: 'journals.index',
+            component: () => import('@cruds/Journals/Index.vue'),
+            meta: { title: 'cruds.journal.title' }
+          },
+          {
+            path: 'journals/:id',
+            name: 'journals.show',
+            component: () => import('@cruds/Journals/Show.vue'),
+            meta: { title: 'cruds.journal.title' }
           }
         ]
       },
       {
-        path: 'basic-c-r-m',
-        name: 'basic_c_r_m',
+        path: 'customer-management',
+        name: 'customer_management',
         component: View,
-        redirect: { name: 'crm_statuses.index' },
+        redirect: { name: 'customers.index' },
         children: [
           {
-            path: 'crm-statuses',
-            name: 'crm_statuses.index',
-            component: () => import('@cruds/CrmStatuses/Index.vue'),
-            meta: { title: 'cruds.crmStatus.title' }
+            path: 'customers',
+            name: 'customers.index',
+            component: () => import('@cruds/Customers/Index.vue'),
+            meta: { title: 'cruds.customer.title' }
           },
           {
-            path: 'crm-statuses/create',
-            name: 'crm_statuses.create',
-            component: () => import('@cruds/CrmStatuses/Create.vue'),
-            meta: { title: 'cruds.crmStatus.title' }
+            path: 'customers/create',
+            name: 'customers.create',
+            component: () => import('@cruds/Customers/Create.vue'),
+            meta: { title: 'cruds.customer.title' }
           },
           {
-            path: 'crm-statuses/:id',
-            name: 'crm_statuses.show',
-            component: () => import('@cruds/CrmStatuses/Show.vue'),
-            meta: { title: 'cruds.crmStatus.title' }
+            path: 'customers/:id',
+            name: 'customers.show',
+            component: () => import('@cruds/Customers/Show.vue'),
+            meta: { title: 'cruds.customer.title' }
           },
           {
-            path: 'crm-statuses/:id/edit',
-            name: 'crm_statuses.edit',
-            component: () => import('@cruds/CrmStatuses/Edit.vue'),
-            meta: { title: 'cruds.crmStatus.title' }
+            path: 'customers/:id/edit',
+            name: 'customers.edit',
+            component: () => import('@cruds/Customers/Edit.vue'),
+            meta: { title: 'cruds.customer.title' }
           },
           {
-            path: 'crm-customers',
-            name: 'crm_customers.index',
-            component: () => import('@cruds/CrmCustomers/Index.vue'),
-            meta: { title: 'cruds.crmCustomer.title' }
+            path: 'collaterals',
+            name: 'collaterals.index',
+            component: () => import('@cruds/Collaterals/Index.vue'),
+            meta: { title: 'cruds.collateral.title' }
           },
           {
-            path: 'crm-customers/create',
-            name: 'crm_customers.create',
-            component: () => import('@cruds/CrmCustomers/Create.vue'),
-            meta: { title: 'cruds.crmCustomer.title' }
+            path: 'collaterals/create',
+            name: 'collaterals.create',
+            component: () => import('@cruds/Collaterals/Create.vue'),
+            meta: { title: 'cruds.collateral.title' }
           },
           {
-            path: 'crm-customers/:id',
-            name: 'crm_customers.show',
-            component: () => import('@cruds/CrmCustomers/Show.vue'),
-            meta: { title: 'cruds.crmCustomer.title' }
+            path: 'collaterals/:id',
+            name: 'collaterals.show',
+            component: () => import('@cruds/Collaterals/Show.vue'),
+            meta: { title: 'cruds.collateral.title' }
           },
           {
-            path: 'crm-customers/:id/edit',
-            name: 'crm_customers.edit',
-            component: () => import('@cruds/CrmCustomers/Edit.vue'),
-            meta: { title: 'cruds.crmCustomer.title' }
+            path: 'collaterals/:id/edit',
+            name: 'collaterals.edit',
+            component: () => import('@cruds/Collaterals/Edit.vue'),
+            meta: { title: 'cruds.collateral.title' }
+          }
+        ]
+      },
+      {
+        path: 'loan-management',
+        name: 'loan_management',
+        component: View,
+        redirect: { name: 'applications.index' },
+        children: [
+          {
+            path: 'applications',
+            name: 'applications.index',
+            component: () => import('@cruds/Applications/Index.vue'),
+            meta: { title: 'cruds.application.title' }
           },
           {
-            path: 'crm-notes',
-            name: 'crm_notes.index',
-            component: () => import('@cruds/CrmNotes/Index.vue'),
-            meta: { title: 'cruds.crmNote.title' }
+            path: 'applications/create',
+            name: 'applications.create',
+            component: () => import('@cruds/Applications/Create.vue'),
+            meta: { title: 'cruds.application.title' }
           },
           {
-            path: 'crm-notes/create',
-            name: 'crm_notes.create',
-            component: () => import('@cruds/CrmNotes/Create.vue'),
-            meta: { title: 'cruds.crmNote.title' }
+            path: 'applications/:id',
+            name: 'applications.show',
+            component: () => import('@cruds/Applications/Show.vue'),
+            meta: { title: 'cruds.application.title' }
           },
           {
-            path: 'crm-notes/:id',
-            name: 'crm_notes.show',
-            component: () => import('@cruds/CrmNotes/Show.vue'),
-            meta: { title: 'cruds.crmNote.title' }
+            path: 'applications/:id/edit',
+            name: 'applications.edit',
+            component: () => import('@cruds/Applications/Edit.vue'),
+            meta: { title: 'cruds.application.title' }
           },
           {
-            path: 'crm-notes/:id/edit',
-            name: 'crm_notes.edit',
-            component: () => import('@cruds/CrmNotes/Edit.vue'),
-            meta: { title: 'cruds.crmNote.title' }
+            path: 'contracts',
+            name: 'contracts.index',
+            component: () => import('@cruds/Contracts/Index.vue'),
+            meta: { title: 'cruds.contract.title' }
           },
           {
-            path: 'crm-documents',
-            name: 'crm_documents.index',
-            component: () => import('@cruds/CrmDocuments/Index.vue'),
-            meta: { title: 'cruds.crmDocument.title' }
+            path: 'contracts/create',
+            name: 'contracts.create',
+            component: () => import('@cruds/Contracts/Create.vue'),
+            meta: { title: 'cruds.contract.title' }
           },
           {
-            path: 'crm-documents/create',
-            name: 'crm_documents.create',
-            component: () => import('@cruds/CrmDocuments/Create.vue'),
-            meta: { title: 'cruds.crmDocument.title' }
+            path: 'contracts/:id',
+            name: 'contracts.show',
+            component: () => import('@cruds/Contracts/Show.vue'),
+            meta: { title: 'cruds.contract.title' }
           },
           {
-            path: 'crm-documents/:id',
-            name: 'crm_documents.show',
-            component: () => import('@cruds/CrmDocuments/Show.vue'),
-            meta: { title: 'cruds.crmDocument.title' }
+            path: 'contracts/:id/edit',
+            name: 'contracts.edit',
+            component: () => import('@cruds/Contracts/Edit.vue'),
+            meta: { title: 'cruds.contract.title' }
           },
           {
-            path: 'crm-documents/:id/edit',
-            name: 'crm_documents.edit',
-            component: () => import('@cruds/CrmDocuments/Edit.vue'),
-            meta: { title: 'cruds.crmDocument.title' }
+            path: 'schedules',
+            name: 'schedules.index',
+            component: () => import('@cruds/Schedules/Index.vue'),
+            meta: { title: 'cruds.schedule.title' }
+          },
+          {
+            path: 'schedules/:id',
+            name: 'schedules.show',
+            component: () => import('@cruds/Schedules/Show.vue'),
+            meta: { title: 'cruds.schedule.title' }
+          }
+        ]
+      },
+      {
+        path: 'recovery-management',
+        name: 'recovery_management',
+        component: View,
+        redirect: { name: 'recoveries.index' },
+        children: [
+          {
+            path: 'recoveries',
+            name: 'recoveries.index',
+            component: () => import('@cruds/Recoveries/Index.vue'),
+            meta: { title: 'cruds.recovery.title' }
+          },
+          {
+            path: 'recoveries/create',
+            name: 'recoveries.create',
+            component: () => import('@cruds/Recoveries/Create.vue'),
+            meta: { title: 'cruds.recovery.title' }
+          },
+          {
+            path: 'recoveries/:id',
+            name: 'recoveries.show',
+            component: () => import('@cruds/Recoveries/Show.vue'),
+            meta: { title: 'cruds.recovery.title' }
+          },
+          {
+            path: 'recoveries/:id/edit',
+            name: 'recoveries.edit',
+            component: () => import('@cruds/Recoveries/Edit.vue'),
+            meta: { title: 'cruds.recovery.title' }
+          }
+        ]
+      },
+      {
+        path: 'write-off-management',
+        name: 'write_off_management',
+        component: View,
+        redirect: { name: 'write_offs.index' },
+        children: [
+          {
+            path: 'write-offs',
+            name: 'write_offs.index',
+            component: () => import('@cruds/WriteOffs/Index.vue'),
+            meta: { title: 'cruds.writeOff.title' }
+          },
+          {
+            path: 'write-offs/create',
+            name: 'write_offs.create',
+            component: () => import('@cruds/WriteOffs/Create.vue'),
+            meta: { title: 'cruds.writeOff.title' }
+          },
+          {
+            path: 'write-offs/:id',
+            name: 'write_offs.show',
+            component: () => import('@cruds/WriteOffs/Show.vue'),
+            meta: { title: 'cruds.writeOff.title' }
+          },
+          {
+            path: 'write-offs/:id/edit',
+            name: 'write_offs.edit',
+            component: () => import('@cruds/WriteOffs/Edit.vue'),
+            meta: { title: 'cruds.writeOff.title' }
           }
         ]
       },
@@ -312,450 +764,6 @@ const routes = [
             meta: { title: 'cruds.faqQuestion.title' }
           }
         ]
-      },
-      {
-        path: 'content-management',
-        name: 'content_management',
-        component: View,
-        redirect: { name: 'content_categories.index' },
-        children: [
-          {
-            path: 'content-categories',
-            name: 'content_categories.index',
-            component: () => import('@cruds/ContentCategories/Index.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-categories/create',
-            name: 'content_categories.create',
-            component: () => import('@cruds/ContentCategories/Create.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-categories/:id',
-            name: 'content_categories.show',
-            component: () => import('@cruds/ContentCategories/Show.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-categories/:id/edit',
-            name: 'content_categories.edit',
-            component: () => import('@cruds/ContentCategories/Edit.vue'),
-            meta: { title: 'cruds.contentCategory.title' }
-          },
-          {
-            path: 'content-tags',
-            name: 'content_tags.index',
-            component: () => import('@cruds/ContentTags/Index.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-tags/create',
-            name: 'content_tags.create',
-            component: () => import('@cruds/ContentTags/Create.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-tags/:id',
-            name: 'content_tags.show',
-            component: () => import('@cruds/ContentTags/Show.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-tags/:id/edit',
-            name: 'content_tags.edit',
-            component: () => import('@cruds/ContentTags/Edit.vue'),
-            meta: { title: 'cruds.contentTag.title' }
-          },
-          {
-            path: 'content-pages',
-            name: 'content_pages.index',
-            component: () => import('@cruds/ContentPages/Index.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          },
-          {
-            path: 'content-pages/create',
-            name: 'content_pages.create',
-            component: () => import('@cruds/ContentPages/Create.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          },
-          {
-            path: 'content-pages/:id',
-            name: 'content_pages.show',
-            component: () => import('@cruds/ContentPages/Show.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          },
-          {
-            path: 'content-pages/:id/edit',
-            name: 'content_pages.edit',
-            component: () => import('@cruds/ContentPages/Edit.vue'),
-            meta: { title: 'cruds.contentPage.title' }
-          }
-        ]
-      },
-      {
-        path: 'product-management',
-        name: 'product_management',
-        component: View,
-        redirect: { name: 'product_categories.index' },
-        children: [
-          {
-            path: 'product-categories',
-            name: 'product_categories.index',
-            component: () => import('@cruds/ProductCategories/Index.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-categories/create',
-            name: 'product_categories.create',
-            component: () => import('@cruds/ProductCategories/Create.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-categories/:id',
-            name: 'product_categories.show',
-            component: () => import('@cruds/ProductCategories/Show.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-categories/:id/edit',
-            name: 'product_categories.edit',
-            component: () => import('@cruds/ProductCategories/Edit.vue'),
-            meta: { title: 'cruds.productCategory.title' }
-          },
-          {
-            path: 'product-tags',
-            name: 'product_tags.index',
-            component: () => import('@cruds/ProductTags/Index.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'product-tags/create',
-            name: 'product_tags.create',
-            component: () => import('@cruds/ProductTags/Create.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'product-tags/:id',
-            name: 'product_tags.show',
-            component: () => import('@cruds/ProductTags/Show.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'product-tags/:id/edit',
-            name: 'product_tags.edit',
-            component: () => import('@cruds/ProductTags/Edit.vue'),
-            meta: { title: 'cruds.productTag.title' }
-          },
-          {
-            path: 'products',
-            name: 'products.index',
-            component: () => import('@cruds/Products/Index.vue'),
-            meta: { title: 'cruds.product.title' }
-          },
-          {
-            path: 'products/create',
-            name: 'products.create',
-            component: () => import('@cruds/Products/Create.vue'),
-            meta: { title: 'cruds.product.title' }
-          },
-          {
-            path: 'products/:id',
-            name: 'products.show',
-            component: () => import('@cruds/Products/Show.vue'),
-            meta: { title: 'cruds.product.title' }
-          },
-          {
-            path: 'products/:id/edit',
-            name: 'products.edit',
-            component: () => import('@cruds/Products/Edit.vue'),
-            meta: { title: 'cruds.product.title' }
-          }
-        ]
-      },
-      {
-        path: 'courses',
-        name: 'courses.index',
-        component: () => import('@cruds/Courses/Index.vue'),
-        meta: { title: 'cruds.course.title' }
-      },
-      {
-        path: 'courses/create',
-        name: 'courses.create',
-        component: () => import('@cruds/Courses/Create.vue'),
-        meta: { title: 'cruds.course.title' }
-      },
-      {
-        path: 'courses/:id',
-        name: 'courses.show',
-        component: () => import('@cruds/Courses/Show.vue'),
-        meta: { title: 'cruds.course.title' }
-      },
-      {
-        path: 'courses/:id/edit',
-        name: 'courses.edit',
-        component: () => import('@cruds/Courses/Edit.vue'),
-        meta: { title: 'cruds.course.title' }
-      },
-      {
-        path: 'lessons',
-        name: 'lessons.index',
-        component: () => import('@cruds/Lessons/Index.vue'),
-        meta: { title: 'cruds.lesson.title' }
-      },
-      {
-        path: 'lessons/create',
-        name: 'lessons.create',
-        component: () => import('@cruds/Lessons/Create.vue'),
-        meta: { title: 'cruds.lesson.title' }
-      },
-      {
-        path: 'lessons/:id',
-        name: 'lessons.show',
-        component: () => import('@cruds/Lessons/Show.vue'),
-        meta: { title: 'cruds.lesson.title' }
-      },
-      {
-        path: 'lessons/:id/edit',
-        name: 'lessons.edit',
-        component: () => import('@cruds/Lessons/Edit.vue'),
-        meta: { title: 'cruds.lesson.title' }
-      },
-      {
-        path: 'tests',
-        name: 'tests.index',
-        component: () => import('@cruds/Tests/Index.vue'),
-        meta: { title: 'cruds.test.title' }
-      },
-      {
-        path: 'tests/create',
-        name: 'tests.create',
-        component: () => import('@cruds/Tests/Create.vue'),
-        meta: { title: 'cruds.test.title' }
-      },
-      {
-        path: 'tests/:id',
-        name: 'tests.show',
-        component: () => import('@cruds/Tests/Show.vue'),
-        meta: { title: 'cruds.test.title' }
-      },
-      {
-        path: 'tests/:id/edit',
-        name: 'tests.edit',
-        component: () => import('@cruds/Tests/Edit.vue'),
-        meta: { title: 'cruds.test.title' }
-      },
-      {
-        path: 'questions',
-        name: 'questions.index',
-        component: () => import('@cruds/Questions/Index.vue'),
-        meta: { title: 'cruds.question.title' }
-      },
-      {
-        path: 'questions/create',
-        name: 'questions.create',
-        component: () => import('@cruds/Questions/Create.vue'),
-        meta: { title: 'cruds.question.title' }
-      },
-      {
-        path: 'questions/:id',
-        name: 'questions.show',
-        component: () => import('@cruds/Questions/Show.vue'),
-        meta: { title: 'cruds.question.title' }
-      },
-      {
-        path: 'questions/:id/edit',
-        name: 'questions.edit',
-        component: () => import('@cruds/Questions/Edit.vue'),
-        meta: { title: 'cruds.question.title' }
-      },
-      {
-        path: 'question-options',
-        name: 'question_options.index',
-        component: () => import('@cruds/QuestionOptions/Index.vue'),
-        meta: { title: 'cruds.questionOption.title' }
-      },
-      {
-        path: 'question-options/create',
-        name: 'question_options.create',
-        component: () => import('@cruds/QuestionOptions/Create.vue'),
-        meta: { title: 'cruds.questionOption.title' }
-      },
-      {
-        path: 'question-options/:id',
-        name: 'question_options.show',
-        component: () => import('@cruds/QuestionOptions/Show.vue'),
-        meta: { title: 'cruds.questionOption.title' }
-      },
-      {
-        path: 'question-options/:id/edit',
-        name: 'question_options.edit',
-        component: () => import('@cruds/QuestionOptions/Edit.vue'),
-        meta: { title: 'cruds.questionOption.title' }
-      },
-      {
-        path: 'test-results',
-        name: 'test_results.index',
-        component: () => import('@cruds/TestResults/Index.vue'),
-        meta: { title: 'cruds.testResult.title' }
-      },
-      {
-        path: 'test-results/create',
-        name: 'test_results.create',
-        component: () => import('@cruds/TestResults/Create.vue'),
-        meta: { title: 'cruds.testResult.title' }
-      },
-      {
-        path: 'test-results/:id',
-        name: 'test_results.show',
-        component: () => import('@cruds/TestResults/Show.vue'),
-        meta: { title: 'cruds.testResult.title' }
-      },
-      {
-        path: 'test-results/:id/edit',
-        name: 'test_results.edit',
-        component: () => import('@cruds/TestResults/Edit.vue'),
-        meta: { title: 'cruds.testResult.title' }
-      },
-      {
-        path: 'test-answers',
-        name: 'test_answers.index',
-        component: () => import('@cruds/TestAnswers/Index.vue'),
-        meta: { title: 'cruds.testAnswer.title' }
-      },
-      {
-        path: 'test-answers/create',
-        name: 'test_answers.create',
-        component: () => import('@cruds/TestAnswers/Create.vue'),
-        meta: { title: 'cruds.testAnswer.title' }
-      },
-      {
-        path: 'test-answers/:id',
-        name: 'test_answers.show',
-        component: () => import('@cruds/TestAnswers/Show.vue'),
-        meta: { title: 'cruds.testAnswer.title' }
-      },
-      {
-        path: 'test-answers/:id/edit',
-        name: 'test_answers.edit',
-        component: () => import('@cruds/TestAnswers/Edit.vue'),
-        meta: { title: 'cruds.testAnswer.title' }
-      },
-      {
-        path: 'expense-management',
-        name: 'expense_management',
-        component: View,
-        redirect: { name: 'expense_categories.index' },
-        children: [
-          {
-            path: 'expense-categories',
-            name: 'expense_categories.index',
-            component: () => import('@cruds/ExpenseCategories/Index.vue'),
-            meta: { title: 'cruds.expenseCategory.title' }
-          },
-          {
-            path: 'expense-categories/create',
-            name: 'expense_categories.create',
-            component: () => import('@cruds/ExpenseCategories/Create.vue'),
-            meta: { title: 'cruds.expenseCategory.title' }
-          },
-          {
-            path: 'expense-categories/:id',
-            name: 'expense_categories.show',
-            component: () => import('@cruds/ExpenseCategories/Show.vue'),
-            meta: { title: 'cruds.expenseCategory.title' }
-          },
-          {
-            path: 'expense-categories/:id/edit',
-            name: 'expense_categories.edit',
-            component: () => import('@cruds/ExpenseCategories/Edit.vue'),
-            meta: { title: 'cruds.expenseCategory.title' }
-          },
-          {
-            path: 'income-categories',
-            name: 'income_categories.index',
-            component: () => import('@cruds/IncomeCategories/Index.vue'),
-            meta: { title: 'cruds.incomeCategory.title' }
-          },
-          {
-            path: 'income-categories/create',
-            name: 'income_categories.create',
-            component: () => import('@cruds/IncomeCategories/Create.vue'),
-            meta: { title: 'cruds.incomeCategory.title' }
-          },
-          {
-            path: 'income-categories/:id',
-            name: 'income_categories.show',
-            component: () => import('@cruds/IncomeCategories/Show.vue'),
-            meta: { title: 'cruds.incomeCategory.title' }
-          },
-          {
-            path: 'income-categories/:id/edit',
-            name: 'income_categories.edit',
-            component: () => import('@cruds/IncomeCategories/Edit.vue'),
-            meta: { title: 'cruds.incomeCategory.title' }
-          },
-          {
-            path: 'expenses',
-            name: 'expenses.index',
-            component: () => import('@cruds/Expenses/Index.vue'),
-            meta: { title: 'cruds.expense.title' }
-          },
-          {
-            path: 'expenses/create',
-            name: 'expenses.create',
-            component: () => import('@cruds/Expenses/Create.vue'),
-            meta: { title: 'cruds.expense.title' }
-          },
-          {
-            path: 'expenses/:id',
-            name: 'expenses.show',
-            component: () => import('@cruds/Expenses/Show.vue'),
-            meta: { title: 'cruds.expense.title' }
-          },
-          {
-            path: 'expenses/:id/edit',
-            name: 'expenses.edit',
-            component: () => import('@cruds/Expenses/Edit.vue'),
-            meta: { title: 'cruds.expense.title' }
-          },
-          {
-            path: 'incomes',
-            name: 'incomes.index',
-            component: () => import('@cruds/Incomes/Index.vue'),
-            meta: { title: 'cruds.income.title' }
-          },
-          {
-            path: 'incomes/create',
-            name: 'incomes.create',
-            component: () => import('@cruds/Incomes/Create.vue'),
-            meta: { title: 'cruds.income.title' }
-          },
-          {
-            path: 'incomes/:id',
-            name: 'incomes.show',
-            component: () => import('@cruds/Incomes/Show.vue'),
-            meta: { title: 'cruds.income.title' }
-          },
-          {
-            path: 'incomes/:id/edit',
-            name: 'incomes.edit',
-            component: () => import('@cruds/Incomes/Edit.vue'),
-            meta: { title: 'cruds.income.title' }
-          },
-          {
-            path: 'expense-reports',
-            name: 'expense_reports.index',
-            component: () => import('@cruds/ExpenseReports/Index.vue'),
-            meta: { title: 'cruds.expenseReport.title' }
-          }
-        ]
-      },
-      {
-        path: 'dsfs',
-        name: 'dsfs.index',
-        component: () => import('@cruds/Dsfs/Index.vue'),
-        meta: { title: 'cruds.dsf.title' }
       }
     ]
   }

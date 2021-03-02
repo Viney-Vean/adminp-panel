@@ -20,91 +20,79 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Users
     Route::resource('users', 'UsersApiController');
 
-    // Contact Companies
-    Route::resource('contact-companies', 'ContactCompanyApiController');
+    // Accounts
+    Route::resource('accounts', 'AccountApiController');
 
-    // Contact Contacts
-    Route::resource('contact-contacts', 'ContactContactsApiController');
+    // Recoveries
+    Route::resource('recoveries', 'RecoveryApiController');
 
-    // Crm Statuses
-    Route::resource('crm-statuses', 'CrmStatusApiController');
+    // Branches
+    Route::resource('branches', 'BranchesApiController');
 
-    // Crm Customers
-    Route::resource('crm-customers', 'CrmCustomerApiController');
+    // Account Products
+    Route::resource('account-products', 'AccountProductApiController');
 
-    // Crm Notes
-    Route::resource('crm-notes', 'CrmNoteApiController');
+    // Account Product Types
+    Route::resource('account-product-types', 'AccountProductTypeApiController');
 
-    // Crm Documents
-    Route::post('crm-documents/media', 'CrmDocumentApiController@storeMedia')->name('crm-documents.storeMedia');
-    Route::resource('crm-documents', 'CrmDocumentApiController');
+    // Positions
+    Route::resource('positions', 'PositionApiController');
 
-    // Faq Categories
-    Route::resource('faq-categories', 'FaqCategoryApiController');
+    // Write Offs
+    Route::resource('write-offs', 'WriteOffApiController');
 
-    // Faq Questions
-    Route::resource('faq-questions', 'FaqQuestionApiController');
+    // Account Entries
+    Route::resource('account-entries', 'AccountEntryApiController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 
-    // Content Categories
-    Route::resource('content-categories', 'ContentCategoryApiController');
+    // Officers
+    Route::resource('officers', 'OfficerApiController');
 
-    // Content Tags
-    Route::resource('content-tags', 'ContentTagApiController');
+    // Schedules
+    Route::resource('schedules', 'ScheduleApiController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 
-    // Content Pages
-    Route::post('content-pages/media', 'ContentPageApiController@storeMedia')->name('content-pages.storeMedia');
-    Route::resource('content-pages', 'ContentPageApiController');
+    // Collaterals
+    Route::resource('collaterals', 'CollateralApiController');
 
-    // Product Categories
-    Route::post('product-categories/media', 'ProductCategoryApiController@storeMedia')->name('product-categories.storeMedia');
-    Route::resource('product-categories', 'ProductCategoryApiController');
+    // Journals
+    Route::resource('journals', 'JournalApiController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 
-    // Product Tags
-    Route::resource('product-tags', 'ProductTagApiController');
+    // Provisions
+    Route::resource('provisions', 'ProvisionApiController');
 
-    // Products
-    Route::post('products/media', 'ProductApiController@storeMedia')->name('products.storeMedia');
-    Route::resource('products', 'ProductApiController');
+    // Collection Settings
+    Route::resource('collection-settings', 'CollectionSettingApiController');
 
-    // Courses
-    Route::post('courses/media', 'CoursesApiController@storeMedia')->name('courses.storeMedia');
-    Route::resource('courses', 'CoursesApiController');
+    // Customers
+    Route::post('customers/media', 'CustomerApiController@storeMedia')->name('customers.storeMedia');
+    Route::resource('customers', 'CustomerApiController');
 
-    // Lessons
-    Route::post('lessons/media', 'LessonsApiController@storeMedia')->name('lessons.storeMedia');
-    Route::resource('lessons', 'LessonsApiController');
+    // Loan Products
+    Route::resource('loan-products', 'LoanProductApiController');
 
-    // Tests
-    Route::resource('tests', 'TestsApiController');
+    // Loan Product Provisions
+    Route::resource('loan-product-provisions', 'LoanProductProvisionApiController');
 
-    // Questions
-    Route::post('questions/media', 'QuestionsApiController@storeMedia')->name('questions.storeMedia');
-    Route::resource('questions', 'QuestionsApiController');
+    // Companies
+    Route::resource('companies', 'CompanyApiController');
 
-    // Question Options
-    Route::resource('question-options', 'QuestionOptionsApiController');
+    // Contracts
+    Route::resource('contracts', 'ContractApiController');
 
-    // Test Results
-    Route::resource('test-results', 'TestResultsApiController');
+    // Chart Of Accounts
+    Route::resource('chart-of-accounts', 'ChartOfAccountApiController', ['except' => ['destroy']]);
 
-    // Test Answers
-    Route::resource('test-answers', 'TestAnswersApiController');
+    // Account Types
+    Route::resource('account-types', 'AccountTypeApiController');
 
-    // Expense Categories
-    Route::resource('expense-categories', 'ExpenseCategoryApiController');
+    // Currencies
+    Route::resource('currencies', 'CurrencyApiController');
 
-    // Income Categories
-    Route::resource('income-categories', 'IncomeCategoryApiController');
+    // Applications
+    Route::resource('applications', 'ApplicationApiController');
 
-    // Expenses
-    Route::resource('expenses', 'ExpenseApiController');
+    // System Dates
+    Route::resource('system-dates', 'SystemDateApiController');
 
-    // Incomes
-    Route::resource('incomes', 'IncomeApiController');
-
-    // Expense Reports
-    Route::apiResource('expense-reports', 'ExpenseReportApiController', ['only' => ['index']]);
-
-    // Dsfs
-    Route::apiResource('dsfs', 'DsfApiController', ['only' => ['index']]);
+    // System Settings
+    Route::resource('system-settings', 'SystemSettingApiController');
 });

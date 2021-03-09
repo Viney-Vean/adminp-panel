@@ -73,6 +73,7 @@ import TranslatedHeader from '@components/Datatables/TranslatedHeader'
 import HeaderSettings from '@components/Datatables/HeaderSettings'
 import GlobalSearch from '@components/Datatables/GlobalSearch'
 import DatatableList from '@components/Datatables/DatatableList'
+import DatatableSingle from '@components/Datatables/DatatableSingle'
 
 export default {
   components: {
@@ -112,6 +113,26 @@ export default {
           field: 'roles.title',
           thComp: TranslatedHeader,
           tdComp: DatatableList
+        },
+        {
+          title: 'cruds.user.fields.branch',
+          field: 'branch.branch',
+          thComp: TranslatedHeader,
+          tdComp: DatatableSingle,
+          sortable: true
+        },
+        {
+          title: 'cruds.user.fields.access_branch',
+          field: 'access_branch.branch',
+          thComp: TranslatedHeader,
+          tdComp: DatatableList
+        },
+        {
+          title: 'cruds.user.fields.defualt_branch',
+          field: 'defualt_branch.branch',
+          thComp: TranslatedHeader,
+          tdComp: DatatableSingle,
+          sortable: true
         },
         {
           title: 'global.actions',

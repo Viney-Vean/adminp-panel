@@ -10,58 +10,76 @@ import RolesIndex from './cruds/Roles'
 import RolesSingle from './cruds/Roles/single'
 import UsersIndex from './cruds/Users'
 import UsersSingle from './cruds/Users/single'
-import ContactCompaniesIndex from './cruds/ContactCompanies'
-import ContactCompaniesSingle from './cruds/ContactCompanies/single'
-import ContactContactsIndex from './cruds/ContactContacts'
-import ContactContactsSingle from './cruds/ContactContacts/single'
-import CrmStatusesIndex from './cruds/CrmStatuses'
-import CrmStatusesSingle from './cruds/CrmStatuses/single'
-import CrmCustomersIndex from './cruds/CrmCustomers'
-import CrmCustomersSingle from './cruds/CrmCustomers/single'
-import CrmNotesIndex from './cruds/CrmNotes'
-import CrmNotesSingle from './cruds/CrmNotes/single'
-import CrmDocumentsIndex from './cruds/CrmDocuments'
-import CrmDocumentsSingle from './cruds/CrmDocuments/single'
+import AccountsIndex from './cruds/Accounts'
+import AccountsSingle from './cruds/Accounts/single'
+import RecoveriesIndex from './cruds/Recoveries'
+import RecoveriesSingle from './cruds/Recoveries/single'
+import BranchesIndex from './cruds/Branches'
+import BranchesSingle from './cruds/Branches/single'
+import AccountProductsIndex from './cruds/AccountProducts'
+import AccountProductsSingle from './cruds/AccountProducts/single'
+import AccountProductTypesIndex from './cruds/AccountProductTypes'
+import AccountProductTypesSingle from './cruds/AccountProductTypes/single'
+import PositionsIndex from './cruds/Positions'
+import PositionsSingle from './cruds/Positions/single'
+import WriteOffsIndex from './cruds/WriteOffs'
+import WriteOffsSingle from './cruds/WriteOffs/single'
+import AccountEntriesIndex from './cruds/AccountEntries'
+import AccountEntriesSingle from './cruds/AccountEntries/single'
+import OfficersIndex from './cruds/Officers'
+import OfficersSingle from './cruds/Officers/single'
+import SchedulesIndex from './cruds/Schedules'
+import SchedulesSingle from './cruds/Schedules/single'
+import CollateralsIndex from './cruds/Collaterals'
+import CollateralsSingle from './cruds/Collaterals/single'
+import JournalsIndex from './cruds/Journals'
+import JournalsSingle from './cruds/Journals/single'
+import ProvisionsIndex from './cruds/Provisions'
+import ProvisionsSingle from './cruds/Provisions/single'
+import CollectionSettingsIndex from './cruds/CollectionSettings'
+import CollectionSettingsSingle from './cruds/CollectionSettings/single'
+import CustomersIndex from './cruds/Customers'
+import CustomersSingle from './cruds/Customers/single'
+import LoanProductsIndex from './cruds/LoanProducts'
+import LoanProductsSingle from './cruds/LoanProducts/single'
+import LoanProductProvisionsIndex from './cruds/LoanProductProvisions'
+import LoanProductProvisionsSingle from './cruds/LoanProductProvisions/single'
+import CompaniesIndex from './cruds/Companies'
+import CompaniesSingle from './cruds/Companies/single'
+import ContractsIndex from './cruds/Contracts'
+import ContractsSingle from './cruds/Contracts/single'
+import ChartOfAccountsIndex from './cruds/ChartOfAccounts'
+import ChartOfAccountsSingle from './cruds/ChartOfAccounts/single'
+import AccountTypesIndex from './cruds/AccountTypes'
+import AccountTypesSingle from './cruds/AccountTypes/single'
+import CurrenciesIndex from './cruds/Currencies'
+import CurrenciesSingle from './cruds/Currencies/single'
+import ApplicationsIndex from './cruds/Applications'
+import ApplicationsSingle from './cruds/Applications/single'
+import SystemDatesIndex from './cruds/SystemDates'
+import SystemDatesSingle from './cruds/SystemDates/single'
+import SystemSettingsIndex from './cruds/SystemSettings'
+import SystemSettingsSingle from './cruds/SystemSettings/single'
 import FaqCategoriesIndex from './cruds/FaqCategories'
 import FaqCategoriesSingle from './cruds/FaqCategories/single'
 import FaqQuestionsIndex from './cruds/FaqQuestions'
 import FaqQuestionsSingle from './cruds/FaqQuestions/single'
-import ContentCategoriesIndex from './cruds/ContentCategories'
-import ContentCategoriesSingle from './cruds/ContentCategories/single'
-import ContentTagsIndex from './cruds/ContentTags'
-import ContentTagsSingle from './cruds/ContentTags/single'
-import ContentPagesIndex from './cruds/ContentPages'
-import ContentPagesSingle from './cruds/ContentPages/single'
-import ProductCategoriesIndex from './cruds/ProductCategories'
-import ProductCategoriesSingle from './cruds/ProductCategories/single'
-import ProductTagsIndex from './cruds/ProductTags'
-import ProductTagsSingle from './cruds/ProductTags/single'
-import ProductsIndex from './cruds/Products'
-import ProductsSingle from './cruds/Products/single'
-import CoursesIndex from './cruds/Courses'
-import CoursesSingle from './cruds/Courses/single'
-import LessonsIndex from './cruds/Lessons'
-import LessonsSingle from './cruds/Lessons/single'
-import TestsIndex from './cruds/Tests'
-import TestsSingle from './cruds/Tests/single'
-import QuestionsIndex from './cruds/Questions'
-import QuestionsSingle from './cruds/Questions/single'
-import QuestionOptionsIndex from './cruds/QuestionOptions'
-import QuestionOptionsSingle from './cruds/QuestionOptions/single'
-import TestResultsIndex from './cruds/TestResults'
-import TestResultsSingle from './cruds/TestResults/single'
-import TestAnswersIndex from './cruds/TestAnswers'
-import TestAnswersSingle from './cruds/TestAnswers/single'
-import ExpenseCategoriesIndex from './cruds/ExpenseCategories'
-import ExpenseCategoriesSingle from './cruds/ExpenseCategories/single'
-import IncomeCategoriesIndex from './cruds/IncomeCategories'
-import IncomeCategoriesSingle from './cruds/IncomeCategories/single'
-import ExpensesIndex from './cruds/Expenses'
-import ExpensesSingle from './cruds/Expenses/single'
-import IncomesIndex from './cruds/Incomes'
-import IncomesSingle from './cruds/Incomes/single'
-import ExpenseReports from './cruds/ExpenseReports'
-import Dsfs from './cruds/Dsfs'
+import PastDueDetailsIndex from './cruds/PastDueDetails'
+import PastDueDetailsSingle from './cruds/PastDueDetails/single'
+import OptionsIndex from './cruds/Options'
+import OptionsSingle from './cruds/Options/single'
+import NationalitiesIndex from './cruds/Nationalities'
+import NationalitiesSingle from './cruds/Nationalities/single'
+import CountriesIndex from './cruds/Countries'
+import CountriesSingle from './cruds/Countries/single'
+import ProvincesIndex from './cruds/Provinces'
+import ProvincesSingle from './cruds/Provinces/single'
+import DistrictsIndex from './cruds/Districts'
+import DistrictsSingle from './cruds/Districts/single'
+import CommunesIndex from './cruds/Communes'
+import CommunesSingle from './cruds/Communes/single'
+import VillagesIndex from './cruds/Villages'
+import VillagesSingle from './cruds/Villages/single'
 
 Vue.use(Vuex)
 
@@ -77,58 +95,76 @@ export default new Vuex.Store({
     RolesSingle,
     UsersIndex,
     UsersSingle,
-    ContactCompaniesIndex,
-    ContactCompaniesSingle,
-    ContactContactsIndex,
-    ContactContactsSingle,
-    CrmStatusesIndex,
-    CrmStatusesSingle,
-    CrmCustomersIndex,
-    CrmCustomersSingle,
-    CrmNotesIndex,
-    CrmNotesSingle,
-    CrmDocumentsIndex,
-    CrmDocumentsSingle,
+    AccountsIndex,
+    AccountsSingle,
+    RecoveriesIndex,
+    RecoveriesSingle,
+    BranchesIndex,
+    BranchesSingle,
+    AccountProductsIndex,
+    AccountProductsSingle,
+    AccountProductTypesIndex,
+    AccountProductTypesSingle,
+    PositionsIndex,
+    PositionsSingle,
+    WriteOffsIndex,
+    WriteOffsSingle,
+    AccountEntriesIndex,
+    AccountEntriesSingle,
+    OfficersIndex,
+    OfficersSingle,
+    SchedulesIndex,
+    SchedulesSingle,
+    CollateralsIndex,
+    CollateralsSingle,
+    JournalsIndex,
+    JournalsSingle,
+    ProvisionsIndex,
+    ProvisionsSingle,
+    CollectionSettingsIndex,
+    CollectionSettingsSingle,
+    CustomersIndex,
+    CustomersSingle,
+    LoanProductsIndex,
+    LoanProductsSingle,
+    LoanProductProvisionsIndex,
+    LoanProductProvisionsSingle,
+    CompaniesIndex,
+    CompaniesSingle,
+    ContractsIndex,
+    ContractsSingle,
+    ChartOfAccountsIndex,
+    ChartOfAccountsSingle,
+    AccountTypesIndex,
+    AccountTypesSingle,
+    CurrenciesIndex,
+    CurrenciesSingle,
+    ApplicationsIndex,
+    ApplicationsSingle,
+    SystemDatesIndex,
+    SystemDatesSingle,
+    SystemSettingsIndex,
+    SystemSettingsSingle,
     FaqCategoriesIndex,
     FaqCategoriesSingle,
     FaqQuestionsIndex,
     FaqQuestionsSingle,
-    ContentCategoriesIndex,
-    ContentCategoriesSingle,
-    ContentTagsIndex,
-    ContentTagsSingle,
-    ContentPagesIndex,
-    ContentPagesSingle,
-    ProductCategoriesIndex,
-    ProductCategoriesSingle,
-    ProductTagsIndex,
-    ProductTagsSingle,
-    ProductsIndex,
-    ProductsSingle,
-    CoursesIndex,
-    CoursesSingle,
-    LessonsIndex,
-    LessonsSingle,
-    TestsIndex,
-    TestsSingle,
-    QuestionsIndex,
-    QuestionsSingle,
-    QuestionOptionsIndex,
-    QuestionOptionsSingle,
-    TestResultsIndex,
-    TestResultsSingle,
-    TestAnswersIndex,
-    TestAnswersSingle,
-    ExpenseCategoriesIndex,
-    ExpenseCategoriesSingle,
-    IncomeCategoriesIndex,
-    IncomeCategoriesSingle,
-    ExpensesIndex,
-    ExpensesSingle,
-    IncomesIndex,
-    IncomesSingle,
-    ExpenseReports,
-    Dsfs
+    PastDueDetailsIndex,
+    PastDueDetailsSingle,
+    OptionsIndex,
+    OptionsSingle,
+    NationalitiesIndex,
+    NationalitiesSingle,
+    CountriesIndex,
+    CountriesSingle,
+    ProvincesIndex,
+    ProvincesSingle,
+    DistrictsIndex,
+    DistrictsSingle,
+    CommunesIndex,
+    CommunesSingle,
+    VillagesIndex,
+    VillagesSingle
   },
   strict: debug
 })

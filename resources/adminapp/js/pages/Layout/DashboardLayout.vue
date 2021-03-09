@@ -34,6 +34,38 @@ export default {
           path: { name: 'dashboard' }
         },
         {
+          title: 'cruds.companyManagement.title',
+          icon: 'table_view',
+          path: { name: 'company_management' },
+          gate: 'company_management_access',
+          children: [
+            {
+              title: 'cruds.branch.title',
+              icon: 'table_view',
+              path: { name: 'branches.index' },
+              gate: 'branch_access'
+            },
+            {
+              title: 'cruds.company.title',
+              icon: 'table_view',
+              path: { name: 'companies.index' },
+              gate: 'company_access'
+            },
+            {
+              title: 'cruds.position.title',
+              icon: 'table_view',
+              path: { name: 'positions.index' },
+              gate: 'position_access'
+            },
+            {
+              title: 'cruds.officer.title',
+              icon: 'table_view',
+              path: { name: 'officers.index' },
+              gate: 'officer_access'
+            }
+          ]
+        },
+        {
           title: 'cruds.userManagement.title',
           icon: 'person',
           path: { name: 'user_management' },
@@ -60,54 +92,188 @@ export default {
           ]
         },
         {
-          title: 'cruds.contactManagement.title',
-          icon: 'import_contacts',
-          path: { name: 'contact_management' },
-          gate: 'contact_management_access',
+          title: 'cruds.systemSettingManagement.title',
+          icon: 'table_view',
+          path: { name: 'system_setting_management' },
+          gate: 'system_setting_management_access',
           children: [
             {
-              title: 'cruds.contactCompany.title',
-              icon: 'fas fa-building',
-              path: { name: 'contact_companies.index' },
-              gate: 'contact_company_access'
+              title: 'cruds.option.title',
+              icon: 'table_view',
+              path: { name: 'options.index' },
+              gate: 'option_access'
             },
             {
-              title: 'cruds.contactContact.title',
-              icon: 'fas fa-user-plus',
-              path: { name: 'contact_contacts.index' },
-              gate: 'contact_contact_access'
+              title: 'cruds.systemDate.title',
+              icon: 'table_view',
+              path: { name: 'system_dates.index' },
+              gate: 'system_date_access'
+            },
+            {
+              title: 'cruds.collectionSetting.title',
+              icon: 'table_view',
+              path: { name: 'collection_settings.index' },
+              gate: 'collection_setting_access'
+            },
+            {
+              title: 'cruds.systemSetting.title',
+              icon: 'table_view',
+              path: { name: 'system_settings.index' },
+              gate: 'system_setting_access'
             }
           ]
         },
         {
-          title: 'cruds.basicCRM.title',
+          title: 'cruds.chartOfAccountManagement.title',
           icon: 'table_view',
-          path: { name: 'basic_c_r_m' },
-          gate: 'basic_c_r_m_access',
+          path: { name: 'chart_of_account_management' },
+          gate: 'chart_of_account_management_access',
           children: [
             {
-              title: 'cruds.crmStatus.title',
+              title: 'cruds.currency.title',
               icon: 'table_view',
-              path: { name: 'crm_statuses.index' },
-              gate: 'crm_status_access'
+              path: { name: 'currencies.index' },
+              gate: 'currency_access'
             },
             {
-              title: 'cruds.crmCustomer.title',
+              title: 'cruds.accountType.title',
               icon: 'table_view',
-              path: { name: 'crm_customers.index' },
-              gate: 'crm_customer_access'
+              path: { name: 'account_types.index' },
+              gate: 'account_type_access'
             },
             {
-              title: 'cruds.crmNote.title',
+              title: 'cruds.chartOfAccount.title',
               icon: 'table_view',
-              path: { name: 'crm_notes.index' },
-              gate: 'crm_note_access'
+              path: { name: 'chart_of_accounts.index' },
+              gate: 'chart_of_account_access'
             },
             {
-              title: 'cruds.crmDocument.title',
+              title: 'cruds.accountProductType.title',
               icon: 'table_view',
-              path: { name: 'crm_documents.index' },
-              gate: 'crm_document_access'
+              path: { name: 'account_product_types.index' },
+              gate: 'account_product_type_access'
+            },
+            {
+              title: 'cruds.accountProduct.title',
+              icon: 'table_view',
+              path: { name: 'account_products.index' },
+              gate: 'account_product_access'
+            },
+            {
+              title: 'cruds.account.title',
+              icon: 'table_view',
+              path: { name: 'accounts.index' },
+              gate: 'account_access'
+            },
+            {
+              title: 'cruds.provision.title',
+              icon: 'table_view',
+              path: { name: 'provisions.index' },
+              gate: 'provision_access'
+            },
+            {
+              title: 'cruds.loanProduct.title',
+              icon: 'table_view',
+              path: { name: 'loan_products.index' },
+              gate: 'loan_product_access'
+            },
+            {
+              title: 'cruds.loanProductProvision.title',
+              icon: 'table_view',
+              path: { name: 'loan_product_provisions.index' },
+              gate: 'loan_product_provision_access'
+            },
+            {
+              title: 'cruds.accountEntry.title',
+              icon: 'table_view',
+              path: { name: 'account_entries.index' },
+              gate: 'account_entry_access'
+            },
+            {
+              title: 'cruds.journal.title',
+              icon: 'table_view',
+              path: { name: 'journals.index' },
+              gate: 'journal_access'
+            }
+          ]
+        },
+        {
+          title: 'cruds.customerManagement.title',
+          icon: 'table_view',
+          path: { name: 'customer_management' },
+          gate: 'customer_management_access',
+          children: [
+            {
+              title: 'cruds.customer.title',
+              icon: 'table_view',
+              path: { name: 'customers.index' },
+              gate: 'customer_access'
+            },
+            {
+              title: 'cruds.collateral.title',
+              icon: 'table_view',
+              path: { name: 'collaterals.index' },
+              gate: 'collateral_access'
+            }
+          ]
+        },
+        {
+          title: 'cruds.loanManagement.title',
+          icon: 'table_view',
+          path: { name: 'loan_management' },
+          gate: 'loan_management_access',
+          children: [
+            {
+              title: 'cruds.application.title',
+              icon: 'table_view',
+              path: { name: 'applications.index' },
+              gate: 'application_access'
+            },
+            {
+              title: 'cruds.contract.title',
+              icon: 'table_view',
+              path: { name: 'contracts.index' },
+              gate: 'contract_access'
+            },
+            {
+              title: 'cruds.schedule.title',
+              icon: 'table_view',
+              path: { name: 'schedules.index' },
+              gate: 'schedule_access'
+            },
+            {
+              title: 'cruds.pastDueDetail.title',
+              icon: 'table_view',
+              path: { name: 'past_due_details.index' },
+              gate: 'past_due_detail_access'
+            }
+          ]
+        },
+        {
+          title: 'cruds.recoveryManagement.title',
+          icon: 'table_view',
+          path: { name: 'recovery_management' },
+          gate: 'recovery_management_access',
+          children: [
+            {
+              title: 'cruds.recovery.title',
+              icon: 'table_view',
+              path: { name: 'recoveries.index' },
+              gate: 'recovery_access'
+            }
+          ]
+        },
+        {
+          title: 'cruds.writeOffManagement.title',
+          icon: 'table_view',
+          path: { name: 'write_off_management' },
+          gate: 'write_off_management_access',
+          children: [
+            {
+              title: 'cruds.writeOff.title',
+              icon: 'table_view',
+              path: { name: 'write_offs.index' },
+              gate: 'write_off_access'
             }
           ]
         },
@@ -130,144 +296,6 @@ export default {
               gate: 'faq_question_access'
             }
           ]
-        },
-        {
-          title: 'cruds.contentManagement.title',
-          icon: 'table_view',
-          path: { name: 'content_management' },
-          gate: 'content_management_access',
-          children: [
-            {
-              title: 'cruds.contentCategory.title',
-              icon: 'table_view',
-              path: { name: 'content_categories.index' },
-              gate: 'content_category_access'
-            },
-            {
-              title: 'cruds.contentTag.title',
-              icon: 'table_view',
-              path: { name: 'content_tags.index' },
-              gate: 'content_tag_access'
-            },
-            {
-              title: 'cruds.contentPage.title',
-              icon: 'table_view',
-              path: { name: 'content_pages.index' },
-              gate: 'content_page_access'
-            }
-          ]
-        },
-        {
-          title: 'cruds.productManagement.title',
-          icon: 'table_view',
-          path: { name: 'product_management' },
-          gate: 'product_management_access',
-          children: [
-            {
-              title: 'cruds.productCategory.title',
-              icon: 'table_view',
-              path: { name: 'product_categories.index' },
-              gate: 'product_category_access'
-            },
-            {
-              title: 'cruds.productTag.title',
-              icon: 'table_view',
-              path: { name: 'product_tags.index' },
-              gate: 'product_tag_access'
-            },
-            {
-              title: 'cruds.product.title',
-              icon: 'table_view',
-              path: { name: 'products.index' },
-              gate: 'product_access'
-            }
-          ]
-        },
-        {
-          title: 'cruds.course.title',
-          icon: 'table_view',
-          path: { name: 'courses.index' },
-          gate: 'course_access'
-        },
-        {
-          title: 'cruds.lesson.title',
-          icon: 'table_view',
-          path: { name: 'lessons.index' },
-          gate: 'lesson_access'
-        },
-        {
-          title: 'cruds.test.title',
-          icon: 'table_view',
-          path: { name: 'tests.index' },
-          gate: 'test_access'
-        },
-        {
-          title: 'cruds.question.title',
-          icon: 'table_view',
-          path: { name: 'questions.index' },
-          gate: 'question_access'
-        },
-        {
-          title: 'cruds.questionOption.title',
-          icon: 'table_view',
-          path: { name: 'question_options.index' },
-          gate: 'question_option_access'
-        },
-        {
-          title: 'cruds.testResult.title',
-          icon: 'table_view',
-          path: { name: 'test_results.index' },
-          gate: 'test_result_access'
-        },
-        {
-          title: 'cruds.testAnswer.title',
-          icon: 'table_view',
-          path: { name: 'test_answers.index' },
-          gate: 'test_answer_access'
-        },
-        {
-          title: 'cruds.expenseManagement.title',
-          icon: 'account_balance_wallet',
-          path: { name: 'expense_management' },
-          gate: 'expense_management_access',
-          children: [
-            {
-              title: 'cruds.expenseCategory.title',
-              icon: 'table_view',
-              path: { name: 'expense_categories.index' },
-              gate: 'expense_category_access'
-            },
-            {
-              title: 'cruds.incomeCategory.title',
-              icon: 'table_view',
-              path: { name: 'income_categories.index' },
-              gate: 'income_category_access'
-            },
-            {
-              title: 'cruds.expense.title',
-              icon: 'table_view',
-              path: { name: 'expenses.index' },
-              gate: 'expense_access'
-            },
-            {
-              title: 'cruds.income.title',
-              icon: 'table_view',
-              path: { name: 'incomes.index' },
-              gate: 'income_access'
-            },
-            {
-              title: 'cruds.expenseReport.title',
-              icon: 'table_view',
-              path: { name: 'expense_reports.index' },
-              gate: 'expense_report_access'
-            }
-          ]
-        },
-        {
-          title: 'cruds.dsf.title',
-          icon: 'table_view',
-          path: { name: 'dsfs.index' },
-          gate: 'dsf_access'
         }
       ]
     }
